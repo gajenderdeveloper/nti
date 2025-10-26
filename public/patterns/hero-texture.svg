@@ -1,0 +1,16 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'>
+  <rect width='32' height='32' fill='#ffffff'/>
+  <!-- subtle squares using stronger brand color (#133b5c) at low opacity -->
+  <rect x='0' y='0' width='2' height='2' fill='#133b5c' opacity='0.12'/>
+  <rect x='6' y='3' width='1' height='1' fill='#133b5c' opacity='0.07'/>
+  <rect x='12' y='5' width='2' height='2' fill='#133b5c' opacity='0.09'/>
+  <rect x='20' y='8' width='1' height='1' fill='#133b5c' opacity='0.06'/>
+  <rect x='26' y='12' width='2' height='2' fill='#133b5c' opacity='0.08'/>
+  <!-- tiny grain dots -->
+  <circle cx='4' cy='18' r='0.6' fill='#133b5c' opacity='0.06'/>
+  <circle cx='10' cy='22' r='0.5' fill='#133b5c' opacity='0.045'/>
+  <circle cx='18' cy='26' r='0.6' fill='#133b5c' opacity='0.05'/>
+  <circle cx='24' cy='2' r='0.5' fill='#133b5c' opacity='0.04'/>
+  <!-- diagonal micro-lines for texture (very faint) -->
+  <path d='M0 31 L1 30 M4 31 L5 30 M8 31 L9 30 M12 31 L13 30 M16 31 L17 30 M20 31 L21 30 M24 31 L25 30 M28 31 L29 30' stroke='#133b5c' stroke-width='0.35' stroke-opacity='0.06' />
+</svg>
