@@ -14,12 +14,12 @@ export default function Footer() {
                 <div>
                     <h4 className="font-semibold">Quick Links</h4>
                     <div className="h-0.5 w-12 bg-ntiBlue mt-2 mb-3 rounded" />
-                    <ul className="mt-1 space-y-2 text-sm text-slate-300">
-                        <li><a href="/about" className="hover:underline">About Us</a></li>
-                        <li><a href="/about" className="hover:underline">Our Mission</a></li>
-                        <li><a href="/facilities" className="hover:underline">Machining Facilities</a></li>
-                        <li><a href="/products" className="hover:underline">Product Services</a></li>
-                        <li><a href="/contact" className="hover:underline">Contact Us</a></li>
+                    <ul className="mt-1 space-y-2 text-sm text-white">
+                        <li><a href="/about" className="hover:underline text-white">About Us</a></li>
+                        <li><a href="/about" className="hover:underline text-white">Our Mission</a></li>
+                        <li><a href="/facilities" className="hover:underline text-white">Machining Facilities</a></li>
+                        <li><a href="/products" className="hover:underline text-white">Product Services</a></li>
+                        <li><a href="/contact" className="hover:underline text-white">Contact Us</a></li>
                     </ul>
                 </div>
 
@@ -42,8 +42,8 @@ export default function Footer() {
                         Krishna Colony, Gali No.6, Near Sector-25 Ballabgarh, Faridabad-121004 Haryana (India)
                     </address>
                     <div className="mt-3 text-sm">
-                        <div className="text-slate-200">Phone: <a href="tel:+919813047047" className="hover:underline">+91 9813047047</a></div>
-                        <div className="mt-1">Email: <a href="mailto:nti@outlook.in" className="hover:underline">nti@outlook.in</a></div>
+                        <div className="text-white">Phone: <a href="tel:+919813047047" className="hover:underline text-white">+91 9813047047</a></div>
+                        <div className="text-white mt-1">Email: <a href="mailto:nti@ntiep.com" className="hover:underline text-white">nti@ntiep.com</a></div>
                     </div>
                     <p className="mt-4 text-xs text-slate-400">Also: Reseller of FORSTA FILTERS in India | Deals: All kind of engineering plastic products.</p>
                 </div>

@@ -73,3 +73,30 @@ body,
         height: 420px
     }
 }
+
+/* Project color tokens */
+:root {
+    --nti-blue: #133b5c;
+    /* professional blue */
+    --text-color: #0f1720;
+    /* dark grey/near-black */
+}
+
+body {
+    background-color: #ffffff;
+    color: var(--text-color);
+}
+
+h1,
+h2,
+h3 {
+    color: var(--nti-blue);
+}
+
+a {
+    color: var(--nti-blue);
+}
+
+.text-nti-blue {
+    color: var(--nti-blue)
+}

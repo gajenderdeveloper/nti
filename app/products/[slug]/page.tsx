@@ -8,7 +8,7 @@ type Props = { params: { slug: string } }
 const productMeta: Record<string, { title: string; kind?: 'category' | 'custom' }> = {
     'cones': { title: 'Cones', kind: 'category' },
     'custom-screws': { title: 'Custom Screws', kind: 'category' },
-    'pipes-rollers': { title: 'Pipes & Rollers', kind: 'category' },
+    'rollers': { title: 'Rollers', kind: 'category' },
     'gears': { title: 'Gears', kind: 'category' },
     'cable-press-rollers': { title: 'Cable Press Rollers', kind: 'custom' },
     'discharge-rollers': { title: 'Discharge Rollers', kind: 'custom' },
@@ -33,7 +33,7 @@ export default function Page({ params }: Props) {
     }
 
     return (
-        <main className="py-16">
+        <main className="py-16 bg-[#e6f0fa]">
             <div className="container mx-auto px-6">
                 <div className="flex items-center justify-between">
                     <h1 className="text-2xl font-bold">{meta.title}</h1>
