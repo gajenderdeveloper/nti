@@ -156,7 +156,7 @@ export default function Products() {
                                         <div className="overflow-x-auto -mx-4 px-4">
                                             <div className="flex gap-4 w-max">
                                                 {galleryItems.map((g) => (
-                                                    <Link key={g.id} href={`/product/${g.id}`} className="block min-w-[160px] max-w-[200px] text-left">
+                                                    <Link key={g.id} href={`/products/${g.id}`} className="block min-w-[160px] max-w-[200px] text-left">
                                                         <div className="bg-slate-50 h-36 flex items-center justify-center border rounded overflow-hidden">
                                                             <img src={g.imageUrl} alt={g.name} className="object-contain h-32" />
                                                         </div>
