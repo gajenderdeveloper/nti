@@ -93,7 +93,7 @@ const products = [
 
 export default function ProductsPage() {
     return (
-        <section className="bg-hero-texture py-12">
+        <section className="bg-[#e6f0fa] py-12">
             <main className="max-w-7xl mx-auto px-4">
                 <section className="mb-10">
                     <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#13395d] text-center mb-4">Products</h1>

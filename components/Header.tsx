@@ -5,7 +5,7 @@ export default function Header() {
     const [open, setOpen] = useState(false)
 
     return (
-        <header className="bg-hero-texture py-6">
+        <header className="py-6 bg-[#e6f0fa]">
             <div className="max-w-6xl mx-auto px-3">
                 <div className="flex items-center gap-4 bg-slate-900 rounded-lg shadow-md px-4 py-3 text-white">
                     <a href="/" className="inline-flex items-center gap-3">

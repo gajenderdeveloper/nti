@@ -39,7 +39,7 @@ export default function ContactPage() {
     }
 
     return (
-        <main className="bg-hero-texture flex items-center justify-center py-8">
+        <main className="bg-[#e6f0fa] flex items-center justify-center py-8">
             <div className="w-full max-w-2xl bg-slate-900 p-8 rounded-2xl shadow text-center">
                 <h1 className="text-2xl font-bold mb-2 text-white">Contact Us</h1>
                 <p className="mb-6 text-white">Send us a message and we'll get back to you.</p>

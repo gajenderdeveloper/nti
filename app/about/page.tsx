@@ -5,7 +5,7 @@ export default function AboutPage() {
         <>
             <SEO title="About Newtech Industries (NTI)" description="About NTI — ISO 9001:2015 & AS9100 D Certified precision manufacturer" />
 
-            <section className="bg-hero-texture py-16">
+            <section className="py-16 bg-[#e6f0fa]">
                 <div className="max-w-6xl mx-auto px-6 space-y-12">
                     {/* Hero — two column: text + image */}
                     <div className="grid gap-8">
@@ -26,22 +26,22 @@ export default function AboutPage() {
 
                     {/* Vision & Mission two-column boxes */}
                     <div className="grid gap-6 md:grid-cols-2">
-                        <article className="p-6 border rounded-lg bg-white shadow">
-                            <h2 className="text-2xl font-semibold text-[#13395d] text-center">Our Vision</h2>
-                            <p className="mt-2 text-slate-700 leading-relaxed">To be a global leader and a brand of choice for our valued customers, an employer of choice for our employees, and a forward-looking company with sustainable performance and responsible business practices.</p>
+                        <article className="p-6 border rounded-lg bg-slate-900 shadow">
+                            <h2 className="text-2xl font-semibold text-white text-center">Our Vision</h2>
+                            <p className="mt-2 text-slate-300 leading-relaxed">To be a global leader and a brand of choice for our valued customers, an employer of choice for our employees, and a forward-looking company with sustainable performance and responsible business practices.</p>
                         </article>
 
-                        <article className="p-6 border rounded-lg bg-white shadow">
-                            <h2 className="text-2xl font-semibold text-[#13395d] text-center">Our Mission</h2>
-                            <p className="mt-2 text-slate-700 leading-relaxed">To support our customers by providing superior products and services of exceptional value which help them gain competitive advantage in their markets.</p>
+                        <article className="p-6 border rounded-lg bg-slate-900 shadow">
+                            <h2 className="text-2xl font-semibold text-white text-center">Our Mission</h2>
+                            <p className="mt-2 text-slate-300 leading-relaxed">To support our customers by providing superior products and services of exceptional value which help them gain competitive advantage in their markets.</p>
 
-                            <p className="mt-2 text-slate-700 leading-relaxed">To sustain our vision by constantly seeking renewal via continual improvement in processes and the application of new technologies and best business practices.</p>
+                            <p className="mt-2 text-slate-300 leading-relaxed">To sustain our vision by constantly seeking renewal via continual improvement in processes and the application of new technologies and best business practices.</p>
 
-                            <p className="mt-2 text-slate-700 leading-relaxed">To dedicate ourselves to the principle of craftsmanship and collaboration.</p>
+                            <p className="mt-2 text-slate-300 leading-relaxed">To dedicate ourselves to the principle of craftsmanship and collaboration.</p>
 
-                            <p className="mt-2 text-slate-700 leading-relaxed">To utilize the best technologies in mechanical, statistical, and management techniques in manufacturing.</p>
+                            <p className="mt-2 text-slate-300 leading-relaxed">To utilize the best technologies in mechanical, statistical, and management techniques in manufacturing.</p>
 
-                            <p className="mt-2 text-slate-700 leading-relaxed">To strive to achieve a company-wide commitment to continuous improvement in all areas.</p>
+                            <p className="mt-2 text-slate-300 leading-relaxed">To strive to achieve a company-wide commitment to continuous improvement in all areas.</p>
                         </article>
                     </div>
 
@@ -109,55 +109,55 @@ export default function AboutPage() {
                         <div className="mt-6 overflow-hidden">
                             <div className="ticker">
                                 <div className="ticker-track flex gap-4">
-                                    <article className="min-w-[260px] p-4 bg-white border rounded shadow">
-                                        <time className="text-sm font-medium text-slate-800">2009</time>
-                                        <p className="mt-1 text-slate-700">Company incorporated.</p>
+                                    <article className="min-w-[260px] p-4 bg-slate-900 border rounded shadow">
+                                        <time className="text-sm font-medium text-white">2009</time>
+                                        <p className="mt-1 text-white">Company incorporated.</p>
                                     </article>
 
-                                    <article className="min-w-[260px] p-4 bg-white border rounded shadow">
-                                        <time className="text-sm font-medium text-slate-800">2012</time>
-                                        <p className="mt-1 text-slate-700">Entered the machining parts segment.</p>
+                                    <article className="min-w-[260px] p-4 bg-slate-900 border rounded shadow">
+                                        <time className="text-sm font-medium text-white">2012</time>
+                                        <p className="mt-1 text-white">Entered the machining parts segment.</p>
                                     </article>
 
-                                    <article className="min-w-[260px] p-4 bg-white border rounded shadow">
-                                        <time className="text-sm font-medium text-slate-800">2013</time>
-                                        <p className="mt-1 text-slate-700">Entered into manufacturing engineering plastics parts.</p>
+                                    <article className="min-w-[260px] p-4 bg-slate-900 border rounded shadow">
+                                        <time className="text-sm font-medium text-white">2013</time>
+                                        <p className="mt-1 text-white">Entered into manufacturing engineering plastics parts.</p>
                                     </article>
 
-                                    <article className="min-w-[260px] p-4 bg-white border rounded shadow">
-                                        <time className="text-sm font-medium text-slate-800">2016</time>
-                                        <p className="mt-1 text-slate-700">Received first order from Construction Equipment.</p>
+                                    <article className="min-w-[260px] p-4 bg-slate-900 border rounded shadow">
+                                        <time className="text-sm font-medium text-white">2016</time>
+                                        <p className="mt-1 text-white">Received first order from Construction Equipment.</p>
                                     </article>
 
-                                    <article className="min-w-[260px] p-4 bg-white border rounded shadow">
-                                        <time className="text-sm font-medium text-slate-800">2017</time>
-                                        <p className="mt-1 text-slate-700">Supply started to Medical Instruments manufacturing components and export to the USA.</p>
+                                    <article className="min-w-[260px] p-4 bg-slate-900 border rounded shadow">
+                                        <time className="text-sm font-medium text-white">2017</time>
+                                        <p className="mt-1 text-white">Supply started to Medical Instruments manufacturing components and export to the USA.</p>
                                     </article>
 
-                                    <article className="min-w-[260px] p-4 bg-white border rounded shadow">
-                                        <time className="text-sm font-medium text-slate-800">2021</time>
-                                        <p className="mt-1 text-slate-700">Started business in telecommunications.</p>
+                                    <article className="min-w-[260px] p-4 bg-slate-900 border rounded shadow">
+                                        <time className="text-sm font-medium text-white">2021</time>
+                                        <p className="mt-1 text-white">Started business in telecommunications.</p>
                                     </article>
 
-                                    <article className="min-w-[260px] p-4 bg-white border rounded shadow">
-                                        <time className="text-sm font-medium text-slate-800">2023</time>
-                                        <p className="mt-1 text-slate-700">Started supply in the Hydro-turbines sector.</p>
+                                    <article className="min-w-[260px] p-4 bg-slate-900 border rounded shadow">
+                                        <time className="text-sm font-medium text-white">2023</time>
+                                        <p className="mt-1 text-white">Started supply in the Hydro-turbines sector.</p>
                                     </article>
 
-                                    <article className="min-w-[260px] p-4 bg-white border rounded shadow">
-                                        <time className="text-sm font-medium text-slate-800">2024</time>
-                                        <p className="mt-1 text-slate-700">New Tech Sector-25 Plant inaugurated.</p>
+                                    <article className="min-w-[260px] p-4 bg-slate-900 border rounded shadow">
+                                        <time className="text-sm font-medium text-white">2024</time>
+                                        <p className="mt-1 text-white">New Tech Sector-25 Plant inaugurated.</p>
                                     </article>
 
                                     {/* duplicate set for seamless loop */}
-                                    <article className="min-w-[260px] p-4 bg-white border rounded shadow">
-                                        <time className="text-sm font-medium text-slate-800">2009</time>
-                                        <p className="mt-1 text-slate-700">Company incorporated.</p>
+                                    <article className="min-w-[260px] p-4 bg-slate-900 border rounded shadow">
+                                        <time className="text-sm font-medium text-white">2009</time>
+                                        <p className="mt-1 text-white">Company incorporated.</p>
                                     </article>
 
-                                    <article className="min-w-[260px] p-4 bg-white border rounded shadow">
-                                        <time className="text-sm font-medium text-slate-800">2012</time>
-                                        <p className="mt-1 text-slate-700">Entered the machining parts segment.</p>
+                                    <article className="min-w-[260px] p-4 bg-slate-900 border rounded shadow">
+                                        <time className="text-sm font-medium text-white">2012</time>
+                                        <p className="mt-1 text-white">Entered the machining parts segment.</p>
                                     </article>
 
                                 </div>

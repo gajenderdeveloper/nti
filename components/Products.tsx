@@ -85,7 +85,7 @@ const products = [
 
 export default function Products() {
     return (
-        <section id="products" className="py-8 bg-white bg-hero-texture">
+        <section id="products" className="py-8 bg-[#e6f0fa]">
             <div className="container mx-auto px-6">
                 <div className="text-center max-w-2xl mx-auto">
                     <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#13395d]">Product Catalogue</h2>
@@ -97,16 +97,16 @@ export default function Products() {
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                         {products.slice(0, 4).map((p) => (
                             <Link key={p.slug} href={`/products/${p.slug}`} className="block">
-                                <article className="h-full bg-white border rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200">
+                                <article className="h-full bg-slate-900 border rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200">
                                     <div className="h-40 bg-slate-50 flex items-center justify-center">
                                         <img src={`/product-images/${p.slug}/cones.png`} alt={`${p.title} image`} className="object-contain h-32" />
                                     </div>
                                     <div className="p-4">
-                                        <h3 className="text-lg font-semibold text-[#13395d]">{p.title}</h3>
-                                        <p className="mt-2 text-sm text-slate-700">{p.desc}</p>
+                                        <h3 className="text-lg font-semibold text-white">{p.title}</h3>
+                                        <p className="mt-2 text-sm text-white">{p.desc}</p>
                                     </div>
                                     <div className="p-4 pt-0">
-                                        <span className="text-sm text-[#13395d] font-medium">{p.linkText} →</span>
+                                        <span className="text-sm text-white font-medium">{p.linkText} →</span>
                                     </div>
                                 </article>
                             </Link>
@@ -114,7 +114,7 @@ export default function Products() {
                     </div>
 
                     <div className="mt-6 text-center">
-                        <Link href="/products" className="inline-block bg-[#13395d] hover:bg-slate-900 text-white px-5 py-3 rounded-md transition-colors font-medium">
+                        <Link href="/products" className="inline-block bg-slate-900 hover:bg-[#13395d] text-white px-5 py-3 rounded-md transition-colors font-medium">
                             View more products
                         </Link>
                     </div>

@@ -4,7 +4,7 @@ import TiltCard from './TiltCard'
 
 export default function Hero() {
     return (
-        <section className="bg-hero-texture py-6 lg:py-20">
+        <section className="py-6 lg:py-20 bg-[#e6f0fa]">
             <div className="max-w-7xl mx-auto px-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                     <div>
