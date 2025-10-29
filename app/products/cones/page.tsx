@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import ConesSubToggle from '../../../components/ConesSubToggle'
 import { products } from '../../../data/products'
 
 export default function ConesPage({ searchParams }: { searchParams?: { sub?: string } }) {
@@ -18,6 +19,8 @@ export default function ConesPage({ searchParams }: { searchParams?: { sub?: str
             <main className="max-w-7xl mx-auto px-4">
                 <h1 className="text-3xl font-bold text-nti-blue mb-4">{title}</h1>
                 <p className="text-gray-700 mb-6">Our range of cones. Click any product to see details.</p>
+
+                <ConesSubToggle initialOpen={!!sub} />
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                     {items.map((p) => (

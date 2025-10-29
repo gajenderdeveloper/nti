@@ -9,11 +9,11 @@ export default function Hero() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                     <div>
                         <div className="text-center">
-                            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#13395d] text-center">Precision Engineering for a Smarter Tomorrow</h1>
+                            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#13395d] text-start">Precision Engineering for a Smarter Tomorrow</h1>
                         </div>
 
                         <div className="text-center">
-                            <p className="mt-4 lg:mt-10 text-sm lg:text-lg text-[#13395d] font-semibold text-center">An ISO 9001:2015 & AS9100 D Certified Company specializing in precision machined metal and plastic parts for global industries.</p>
+                            <p className="mt-4 lg:mt-10 text-sm lg:text-lg text-[#13395d] font-semibold text-start">NewTech Industries (NTI) is a precision machining enterprise specializing in the manufacture of precision engineering mechanical components for Original Equipment Manufacturers (OEMs) across diverse industrial sectors. Leveraging advanced CNC technology, robust process controls, and stringent quality assurance protocols, NTI delivers engineered parts that meet exacting specifications for performance, durability, and dimensional accuracy.</p>
                         </div>
                     </div>
 

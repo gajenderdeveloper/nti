@@ -8,17 +8,7 @@ import { products as allProducts, getProductsByCategory } from '../data/products
 const featured = [
     {
         slug: 'cones-with',
-        href: '/products/cones?sub=with',
-        image: '/product-images/cones/cone-with.png',
-        title: 'OWN Cones — With Conductive Paints',
-        linkText: 'View All Types',
-        kind: 'category',
-    },
-    {
-        slug: 'cones-without',
-        href: '/products/cones?sub=without',
-        image: '/product-images/cones/cone-without.png',
-        title: 'OWN Cones — Without Conductive Paints',
+        title: 'Own Cones',
         linkText: 'View All Types',
         kind: 'category',
     },
@@ -41,49 +31,6 @@ const featured = [
         kind: 'category',
     },
 
-    {
-        slug: 'cable-press-rollers',
-        title: 'Cable Press Rollers',
-        linkText: 'Learn More',
-        kind: 'custom',
-    },
-    {
-        slug: 'discharge-rollers',
-        title: 'Discharge Rollers',
-        linkText: 'Learn More',
-        kind: 'custom',
-    },
-    {
-        slug: 'pinions',
-        title: 'Pinions',
-        linkText: 'Learn More',
-        kind: 'custom',
-    },
-    {
-        slug: 'sprockets',
-        title: 'Sprockets',
-        linkText: 'Learn More',
-        kind: 'custom',
-    },
-
-    {
-        slug: 'construction-pads',
-        title: 'Construction Pads',
-        linkText: 'Learn More',
-        kind: 'custom',
-    },
-    {
-        slug: 'antenna-telecom-parts',
-        title: 'Antenna & Telecom Parts',
-        linkText: 'Learn More',
-        kind: 'custom',
-    },
-    {
-        slug: 'tailor-made-components',
-        title: 'Tailor-Made Components',
-        linkText: 'Request a Quote',
-        kind: 'custom',
-    },
 ]
 
 export default function Products() {
@@ -145,7 +92,6 @@ export default function Products() {
                                 <div className={`flex items-center justify-between px-6 py-4 border-b ${idx === 0 ? '' : ''}`}>
                                     <button onClick={() => openGalleryFor(p)} className="text-left w-full flex items-center gap-4">
                                         <span className="font-semibold text-white">{p.title}</span>
-                                        {/* description removed per request */}
                                     </button>
                                     <button aria-label={`Expand ${p.title}`} onClick={() => openGalleryFor(p)} className="ml-4 text-2xl text-white font-bold select-none">{expandedSlug === p.slug ? '−' : '+'}</button>
                                 </div>

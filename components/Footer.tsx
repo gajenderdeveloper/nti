@@ -8,7 +8,7 @@ export default function Footer() {
                         <span className="sr-only">Newtech Industries</span>
                     </a>
                     <p className="mt-4 text-sm text-slate-300">A prominent Manufacturer, Supplier, and Service Provider offering a comprehensive range of Precision Machined parts in metal, Epoxy & Plastics.</p>
-                    <p className="mt-3 text-sm text-slate-300">An ISO 9001:2015 & AS9100 D Certified Company.</p>
+                    <p className="mt-3 text-sm text-slate-300">Partner with NTI — where precision meets performance</p>
                 </div>
 
                 <div>
