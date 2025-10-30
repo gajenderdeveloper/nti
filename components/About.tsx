@@ -75,7 +75,7 @@ export default function About() {
                 </div>
 
                 <div className="mt-6">
-                    <Link href="/about" className="inline-block bg-[#13395d] hover:bg-[#e6f0fa] hover:text-[#13395d] text-white px-5 py-3 rounded-md">Read More</Link>
+                    <Link href="/about" className="inline-block hover:bg-[#13395d] bg-[#e6f0fa] text-[#13395d] hover:text-white px-5 py-3 rounded-md">Read More</Link>
                 </div>
             </div>
         </section>
