@@ -1,6 +1,7 @@
 import SEO from '../components/SEO'
 import Hero from '../components/Hero'
 import About from '../components/About'
+import Approvals from '../components/Approvals'
 import Timeline from '../components/Timeline'
 import Products from '../components/Products'
 import Facilities from '../components/Facilities'
@@ -15,6 +16,7 @@ export default function Page() {
             <SEO />
             <Hero />
             <About />
+            <Approvals />
             <Products />
         </>
     )

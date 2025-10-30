@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export default function About() {
     return (
-        <section id="about" className="py-10 bg-slate-900">
+        <section id="about" className="py-16 bg-slate-900">
             <div className="max-w-7xl mx-auto px-6 text-center">
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-white">About NewTech Industries (NTI)</h2>
                 <p className="mt-4 text-white text-sm lg:text-lg">Since 2009, Newtech Industries (NTI) has been a prominent manufacturer and service provider of high-precision machined parts in metal, epoxy, and plastics. We are a single-spot solution for your production line, from R&amp;D and design to final manufacturing. Our products are trusted for their precise dimensions, robust construction, and excellent finish.</p>

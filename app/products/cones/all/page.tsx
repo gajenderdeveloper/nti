@@ -8,8 +8,13 @@ export default function ConesPage({ searchParams }: { searchParams?: { sub?: str
     let items1 = prod.filter((p) => ((p as any).subCategory || '').toLowerCase().includes('with'))
     let items2 = prod.filter((p) => ((p as any).subCategory || '').toLowerCase().includes('without'))
 
+    // Show the intended counts per sub-section on the "all" page
+    // Requirements: 8 items for "With Conductive Paint" and 7 items for "Without Conductive Paint"
+    const items1Preview = items1.slice(0, 8)
+    const items2Preview = items2.slice(0, 7)
 
-    const title1= 'OWN CONES — With Conductive Paints';
+
+    const title1 = 'OWN CONES — With Conductive Paints';
     const title2 = 'OWN CONES — Without Conductive Paints';
 
     return (
@@ -19,7 +24,7 @@ export default function ConesPage({ searchParams }: { searchParams?: { sub?: str
                 <p className="text-gray-700 mb-6">Our range of cones. Click any product to see details.</p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                    {items1.map((p) => (
+                    {items1Preview.map((p) => (
                         <article key={p.id} className="bg-white rounded shadow overflow-hidden">
                             <Link href={`/products/${p.id}`} className="block">
                                 <div className="h-44 bg-gray-100 flex items-center justify-center overflow-hidden">
@@ -36,7 +41,7 @@ export default function ConesPage({ searchParams }: { searchParams?: { sub?: str
                 <h1 className="text-3xl font-bold text-nti-blue mt-16 mb-4">{title2}</h1>
                 <p className="text-gray-700 mb-6">Our range of cones. Click any product to see details.</p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                    {items2.map((p) => (
+                    {items2Preview.map((p) => (
                         <article key={p.id} className="bg-white rounded shadow overflow-hidden">
                             <Link href={`/products/${p.id}`} className="block">
                                 <div className="h-44 bg-gray-100 flex items-center justify-center overflow-hidden">
