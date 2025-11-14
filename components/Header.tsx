@@ -81,7 +81,7 @@ export default function Header() {
 
                             <div className="absolute right-0 mt-2 w-64 bg-white text-slate-900 rounded shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transform translate-y-1 group-hover:translate-y-0 transition-all z-50 max-h-96 overflow-y-auto">
                                 <div className="border-t my-1" />
-                                
+
                                 {productsNav.map((product) => (
                                     <a
                                         key={product.href}
@@ -128,15 +128,15 @@ export default function Header() {
                         <a href="/about" onClick={() => setOpen(false)} className=" whitespace-nowrap text-white py-2">About Us</a>
                         <a href="/facilities" onClick={() => setOpen(false)} className=" whitespace-nowrap text-white py-2">Facilities</a>
                         <a href="/services" onClick={() => setOpen(false)} className=" whitespace-nowrap text-white py-2">Services</a>
-                        
+
                         <div className="py-4">
                             <a href="/products" onClick={() => setOpen(false)} className="block text-white font-semibold">Products</a>
                             <div className="pl-3 flex flex-col gap-2 mt-2">
                                 {productsNav.map((product) => (
-                                    <a 
+                                    <a
                                         key={product.href}
-                                        href={product.href} 
-                                        onClick={() => setOpen(false)} 
+                                        href={product.href}
+                                        onClick={() => setOpen(false)}
                                         className="text-sm text-white"
                                     >
                                         • {product.title}
@@ -144,7 +144,7 @@ export default function Header() {
                                 ))}
                             </div>
                         </div>
-                        
+
                         <a href="/contact" onClick={() => setOpen(false)} className=" whitespace-nowrap text-white py-2">Contact Us</a>
                     </nav>
                 </div>

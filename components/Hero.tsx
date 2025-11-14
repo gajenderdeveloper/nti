@@ -47,7 +47,7 @@ export default function Hero() {
                                 </svg>
                             </button>
 
-                          
+
                             <img
                                 key={slide.src}
                                 src={slide.src}

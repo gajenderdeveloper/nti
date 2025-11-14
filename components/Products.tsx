@@ -95,9 +95,9 @@ const featured = [
 ]
 
 export default function Products() {
-    const [expandedSlug, setExpandedSlug] = useState < string | null > (null)
-    const [galleryItems, setGalleryItems] = useState < any[] > ([])
-    const [selectedProduct, setSelectedProduct] = useState < any | null > (null)
+    const [expandedSlug, setExpandedSlug] = useState<string | null>(null)
+    const [galleryItems, setGalleryItems] = useState<any[]>([])
+    const [selectedProduct, setSelectedProduct] = useState<any | null>(null)
 
     function openGalleryFor(feature) {
         if (expandedSlug === feature.slug) {
