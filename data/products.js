@@ -1,7 +1,4 @@
-// Central product list: 46 products total
-// Categories: cones (15), screws (10), rollers (15), gears (6)
 export const products = [
-    // Cones: 8 with conductive paint, 7 without
     ...Array.from({ length: 8 }).map((_, i) => {
         const idx = String(i + 1).padStart(3, '0')
         return {
@@ -25,7 +22,6 @@ export const products = [
         }
     }),
 
-    // 10 screws
     ...Array.from({ length: 10 }).map((_, i) => {
         const idx = String(i + 1).padStart(3, '0')
         return {
@@ -37,7 +33,6 @@ export const products = [
         }
     }),
 
-    // 15 rollers
     ...Array.from({ length: 15 }).map((_, i) => {
         const idx = String(i + 1).padStart(3, '0')
         return {
@@ -49,7 +44,6 @@ export const products = [
         }
     }),
 
-    // 6 gears
     ...Array.from({ length: 6 }).map((_, i) => {
         const idx = String(i + 1).padStart(3, '0')
         return {

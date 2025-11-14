@@ -1,13 +1,7 @@
 "use client"
 
 import React, { useState } from 'react'
-// Assuming next/link and product data are available.
-// Using <a> tags as a fallback for this environment.
-// import Link from 'next/link'
-// import { products as allProducts, getProductsByCategory } from '../data/products'
 
-// MOCK DATA: Mocking product data for demonstration as we can't access ../data/products
-// You should remove this and use your real import.
 const MOCK_PRODUCTS = {
     'rollers': [
         { id: 'r1', name: 'Roller 1', imageUrl: 'https://placehold.co/200x200/eee/13395d?text=Roller+1' },
@@ -42,10 +36,7 @@ const MOCK_PRODUCTS = {
 const getProductsByCategory = (category) => {
     return MOCK_PRODUCTS[category] || []
 }
-// End of Mock Data
 
-// Featured cards shown on the homepage (first row)
-// MODIFICATION: Replaced with the new 9-item list.
 const featured = [
     {
         slug: 'rollers',
@@ -109,20 +100,16 @@ export default function Products() {
     const [selectedProduct, setSelectedProduct] = useState < any | null > (null)
 
     function openGalleryFor(feature) {
-        // If already open for this feature, close it (toggle behavior)
         if (expandedSlug === feature.slug) {
             closeGallery()
             return
         }
 
-        // Determine category from featured slug/href
         let category: string | null = null
         let subFilter: string | null = null
 
-        // MODIFICATION: Added logic for new categories
         if (feature.slug.startsWith('cones')) {
             category = 'cones'
-            // detect sub query in href
             if (feature.href && feature.href.includes('sub=with')) subFilter = 'With Conductive Paint'
             if (feature.href && feature.href.includes('sub=without')) subFilter = 'Without Conductive Paint'
         } else if (feature.slug.includes('screw')) {
@@ -131,15 +118,15 @@ export default function Products() {
             category = 'rollers'
         } else if (feature.slug.includes('gear')) {
             category = 'gears'
-        } else if (feature.slug.includes('plastic-strips')) { // New
+        } else if (feature.slug.includes('plastic-strips')) {
             category = 'plastic-strips'
-        } else if (feature.slug.includes('sub-reflectors')) { // New
+        } else if (feature.slug.includes('sub-reflectors')) {
             category = 'sub-reflectors'
-        } else if (feature.slug.includes('pipes')) { // New
+        } else if (feature.slug.includes('pipes')) {
             category = 'pipes'
-        } else if (feature.slug.includes('slotted-rings')) { // New
+        } else if (feature.slug.includes('slotted-rings')) {
             category = 'slotted-rings'
-        } else if (feature.slug.includes('miscellaneous')) { // New
+        } else if (feature.slug.includes('miscellaneous')) {
             category = 'miscellaneous'
         }
 
@@ -158,7 +145,6 @@ export default function Products() {
         setSelectedProduct(null)
     }
 
-    // Using <a> tag instead of <Link> for environment compatibility
     const Link = ({ href, children, ...props }) => <a href={href} {...props}>{children}</a>;
 
     return (
@@ -169,7 +155,6 @@ export default function Products() {
                     <p className="mt-3 text-[#13395d] text-sm lg:text-lg">Browse our manufacturing capabilities. Click any card or the + to open a gallery for that product group.</p>
                 </div>
 
-                {/* MODIFICATION: Removed .slice(0, 5) to show all items */}
                 <div className="mt-10">
                     <div className="bg-slate-900 border border-slate-900 rounded-md">
                         {featured.map((p, idx) => (
@@ -181,7 +166,6 @@ export default function Products() {
                                     <button aria-label={`Expand ${p.title}`} onClick={() => openGalleryFor(p)} className="ml-4 text-2xl text-white font-bold select-none">{expandedSlug === p.slug ? '−' : '+'}</button>
                                 </div>
 
-                                {/* Inline gallery for this line */}
                                 {expandedSlug === p.slug && (
                                     <div className="px-6 py-4 bg-[#e6f0fa] border-b border-b-slate-700">
                                         {galleryItems.length > 0 ? (
@@ -202,7 +186,6 @@ export default function Products() {
                                         )}
 
 
-                                        {/* Selected product details (inline) - This logic seems hidden/unused, but preserving it */}
                                         {selectedProduct && (
                                             <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
                                                 <div className="md:col-span-2 bg-white border rounded overflow-hidden p-4">

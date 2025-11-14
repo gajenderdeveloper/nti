@@ -1,10 +1,8 @@
 "use client"
 import { useState } from 'react'
 
-// Using <a> tag instead of <Link> for environment compatibility
 const Link = ({ href, children, ...props }) => <a href={href} {...props}>{children}</a>;
 
-// Define the product navigation list once
 const productsNav = [
     {
         title: 'Rollers',
@@ -57,7 +55,6 @@ export default function Header() {
                         <span className="hidden sm:inline font-semibold text-white">NewTech Industries</span>
                     </a>
 
-                    {/* Desktop nav with short descriptors */}
                     <nav className="ml-auto hidden md:flex gap-8 items-center">
                         <a href="/about" className="py-2 px-3 text-white border-b border-1 border-transparent hover:border-1 hover:border-b hover:border-white">
                             <div className="font-medium">
@@ -82,9 +79,6 @@ export default function Header() {
                                 <svg className="w-4 h-4 ml-2 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
                             </a>
 
-                            {/* Dropdown on hover 
-                              MODIFICATION: Made wider (w-64), scrollable (max-h-96), and dynamically populated from productsNav
-                            */}
                             <div className="absolute right-0 mt-2 w-64 bg-white text-slate-900 rounded shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transform translate-y-1 group-hover:translate-y-0 transition-all z-50 max-h-96 overflow-y-auto">
                                 <div className="border-t my-1" />
                                 
@@ -108,7 +102,6 @@ export default function Header() {
                         </a>
                     </nav>
 
-                    {/* Mobile hamburger */}
                     <button
                         aria-label="Toggle menu"
                         aria-expanded={open}
@@ -122,7 +115,6 @@ export default function Header() {
                 </div>
             </div>
 
-            {/* Mobile overlay menu */}
             <div className={`fixed inset-0 z-40 transform ${open ? 'translate-x-0' : 'translate-x-full'} transition-transform duration-300 md:hidden`}>
                 <div className="absolute inset-0 bg-black/40 z-40" onClick={() => setOpen(false)} />
                 <div className="absolute right-0 top-0 h-full w-3/4 p-6 shadow-lg bg-slate-900 z-50 overflow-y-auto">
@@ -137,8 +129,6 @@ export default function Header() {
                         <a href="/facilities" onClick={() => setOpen(false)} className=" whitespace-nowrap text-white py-2">Facilities</a>
                         <a href="/services" onClick={() => setOpen(false)} className=" whitespace-nowrap text-white py-2">Services</a>
                         
-                        {/* MODIFICATION: Mobile product list is now dynamically populated
-                        */}
                         <div className="py-4">
                             <a href="/products" onClick={() => setOpen(false)} className="block text-white font-semibold">Products</a>
                             <div className="pl-3 flex flex-col gap-2 mt-2">

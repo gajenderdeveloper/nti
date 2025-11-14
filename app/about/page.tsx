@@ -7,7 +7,6 @@ export default function AboutPage() {
 
             <section className="py-16 bg-[#e6f0fa]">
                 <div className="max-w-6xl mx-auto px-6 space-y-12">
-                    {/* Hero — two column: text + image */}
                     <div className="grid gap-8">
                         <div>
                             <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-[#13395d] text-center">About Newtech Industries</h1>
@@ -21,10 +20,8 @@ export default function AboutPage() {
                             <p className="mt-4 text-slate-700 leading-relaxed">All products provided by us are tested on different quality parameters under the strict surveillance of our quality controllers to assure their strength and finishes. To meet the exact needs and preferences of our esteemed customers, we can also customize these products as per their necessities.</p>
                         </div>
 
-                        {/* R&D image removed as requested */}
                     </div>
 
-                    {/* Vision & Mission two-column boxes */}
                     <div className="grid gap-6 md:grid-cols-2">
                         <article className="p-6 border rounded-lg bg-slate-900 shadow">
                             <h2 className="text-2xl font-semibold text-white text-center">Our Vision</h2>
@@ -45,14 +42,12 @@ export default function AboutPage() {
                         </article>
                     </div>
 
-                    {/* Why Choose — icon list */}
                     <div>
                         <h2 className="text-2xl font-semibold text-[#13395d] text-center">Why Choose Newtech?</h2>
 
                         <ul className="mt-4 grid gap-4 sm:grid-cols-2">
                             <li className="flex gap-3 items-start">
                                 <span className="mt-1 text-slate-700">
-                                    {/* Clock/Truck icon */}
                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-[#133b5c]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 7h13M21 7v10a2 2 0 01-2 2H8a2 2 0 01-2-2V7m13 0l2 0m-6 5v1m0 4v1" />
                                     </svg>
@@ -62,7 +57,6 @@ export default function AboutPage() {
 
                             <li className="flex gap-3 items-start">
                                 <span className="mt-1 text-slate-700">
-                                    {/* Medal/Shield icon */}
                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-[#133b5c]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8c1.657 0 3-1.343 3-3S13.657 2 12 2 9 3.343 9 5s1.343 3 3 3zM12 14v8m0 0l-3-3m3 3l3-3" />
                                     </svg>
@@ -72,7 +66,6 @@ export default function AboutPage() {
 
                             <li className="flex gap-3 items-start">
                                 <span className="mt-1 text-slate-700">
-                                    {/* Checkmark icon */}
                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-[#133b5c]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                                     </svg>
@@ -82,7 +75,6 @@ export default function AboutPage() {
 
                             <li className="flex gap-3 items-start">
                                 <span className="mt-1 text-slate-700">
-                                    {/* Boxes/Grid icon */}
                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-[#133b5c]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 3h7v7H3V3zm11 0h7v7h-7V3zM3 14h7v7H3v-7zm11 0h7v7h-7v-7z" />
                                     </svg>
@@ -92,7 +84,6 @@ export default function AboutPage() {
 
                             <li className="flex gap-3 items-start">
                                 <span className="mt-1 text-slate-700">
-                                    {/* Puzzle piece icon */}
                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-[#133b5c]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M20 13.5V6a2 2 0 00-2-2h-7.5m0 0A2.5 2.5 0 009 6v7.5M9 13.5H3v7.5h7.5" />
                                     </svg>
@@ -102,7 +93,6 @@ export default function AboutPage() {
                         </ul>
                     </div>
 
-                    {/* Timeline converted to horizontal auto-scrolling ticker cards */}
                     <div>
                         <h2 className="text-2xl font-semibold text-[#13395d] text-center">Our History (Key Milestones)</h2>
 
@@ -149,7 +139,6 @@ export default function AboutPage() {
                                         <p className="mt-1 text-white">New Tech Sector-25 Plant inaugurated.</p>
                                     </article>
 
-                                    {/* duplicate set for seamless loop */}
                                     <article className="min-w-[260px] p-4 bg-slate-900 border rounded shadow">
                                         <time className="text-sm font-medium text-white">2009</time>
                                         <p className="mt-1 text-white">Company incorporated.</p>
@@ -175,7 +164,6 @@ export default function AboutPage() {
                                 0% { transform: translateX(0); }
                                 100% { transform: translateX(-50%); }
                             }
-                            /* make sure the duplicated content sits inline */
                             .ticker-track > * { flex: 0 0 auto; }
                         ` }} />
                     </div>

@@ -11,7 +11,6 @@ export async function POST(req: Request) {
         const body: ContactBody = await req.json()
         const { name = "", email = "", message = "" } = body
 
-        // Basic validation
         if (!email || !message) {
             return new Response(JSON.stringify({ error: "Missing fields" }), { status: 400 })
         }

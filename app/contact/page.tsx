@@ -91,7 +91,6 @@ export default function ContactPage() {
                     </div>
                 </form>
             </div>
-            {/* Toast / Popup */}
             {showPopup && (
                 <div className="fixed left-1/2 top-6 z-50 w-auto transform -translate-x-1/2">
                     <div className={`inline-flex items-center gap-3 px-4 py-2 rounded shadow-lg text-white ${status === "success" ? "bg-emerald-600" : "bg-red-600"}`}>

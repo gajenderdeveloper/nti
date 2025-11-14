@@ -26,7 +26,6 @@ export default function Approvals() {
                 <p className="text-gray-700 mb-6 text-center">Trusted by industry leaders and approved for critical sectors.</p>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                    {/* Use a two-column grid inside the left area so the two cards sit side-by-side on md+ screens */}
                     <div className="lg:col-span-2">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
                             <div className="bg-[#e6f0fa] p-6 rounded border h-full flex flex-col">
@@ -35,7 +34,6 @@ export default function Approvals() {
                                 <div className="grid grid-cols-1 gap-4">
                                     <div className="flex gap-4 items-start">
                                         <div className="w-20 h-20 flex items-center justify-center bg-white border rounded">
-                                            {/* Placeholder certification icon */}
                                             <svg className="w-10 h-10 text-[#13395d]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                                                 <path d="M12 2l6 3v5c0 5-3 9-6 11-3-2-6-6-6-11V5l6-3z" />
                                                 <path d="M9 12h6" strokeLinecap="round" />

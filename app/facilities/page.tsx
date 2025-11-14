@@ -22,7 +22,6 @@ export default function FacilitiesPage() {
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-[#13395d] text-centertext-3xl md:text-4xl lg:text-5xl font-semibold text-[#13395d] text-center">Facilities</h1>
                 <p className="my-4 text-slate-700 leading-relaxed text-center">Learn about our production capabilities, inspection equipment, R&D and certifications.</p>
 
-                {/* Tabs container */}
                 <div className="mb-6">
                     <div className="flex flex-wrap">
                         <TabButton id="production" label="1. Production" />
@@ -32,9 +31,7 @@ export default function FacilitiesPage() {
                     </div>
                 </div>
 
-                {/* Content container */}
                 <section className="bg-slate-900 rounded-md p-6 shadow text-white">
-                    {/* Production */}
                     <div className={`${active === 'production' ? 'block' : 'hidden'}`}>
                         <h2 className="text-2xl font-semibold text-white mb-3">Production — Overview</h2>
                         <p className="mb-4 text-slate-200 leading-relaxed">Newtech has an innovative and state-of-the-art infrastructural setup equipped with the latest machines to enhance the production rate. The company has more than 30% capacity available, which can be expanded.</p>
@@ -64,7 +61,6 @@ export default function FacilitiesPage() {
                         </ul>
                     </div>
 
-                    {/* Inspection */}
                     <div className={`${active === 'inspection' ? 'block' : 'hidden'}`}>
                         <h2 className="text-2xl font-semibold text-white mb-3">Inspection — Overview</h2>
                         <p className="mb-4 text-slate-200 leading-relaxed">Products are tested on different quality parameters under the strict surveillance of quality controllers.</p>
@@ -80,7 +76,6 @@ export default function FacilitiesPage() {
                         </ul>
                     </div>
 
-                    {/* R&D */}
                     <div className={`${active === 'rnd' ? 'block' : 'hidden'}`}>
                         <h2 className="text-2xl font-semibold text-white mb-3">R&amp;D</h2>
                         <p className="mb-3 text-slate-200 leading-relaxed">Team: Newtech has a dedicated Design team working with leading technology in product design, manufacturing, and testing.</p>
@@ -101,7 +96,6 @@ export default function FacilitiesPage() {
                         </ul>
                     </div>
 
-                    {/* Certificate and Compliance */}
                     <div className={`${active === 'certificate' ? 'block' : 'hidden'}`}>
                         <h2 className="text-2xl font-semibold text-white mb-3">Certificate and Compliance</h2>
                         <p className="mb-4 text-slate-200 leading-relaxed">Overview: Newtech Industries is an ISO 9001:2015 &amp; AS9100 D Certified Company.</p>

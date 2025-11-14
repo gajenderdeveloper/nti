@@ -8,8 +8,6 @@ export default function ConesPage({ searchParams }: { searchParams?: { sub?: str
     let items1 = prod.filter((p) => ((p as any).subCategory || '').toLowerCase().includes('with'))
     let items2 = prod.filter((p) => ((p as any).subCategory || '').toLowerCase().includes('without'))
 
-    // Show the intended counts per sub-section on the "all" page
-    // Requirements: 8 items for "With Conductive Paint" and 7 items for "Without Conductive Paint"
     const items1Preview = items1.slice(0, 8)
     const items2Preview = items2.slice(0, 7)
 

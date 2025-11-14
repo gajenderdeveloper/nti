@@ -8,24 +8,20 @@ body,
     height: 100%;
 }
 
-/* Simple background overlay for hero */
 .bg-nti-hero {
     background-image: linear-gradient(180deg, rgba(11, 94, 215, 0.12), rgba(8, 50, 100, 0.06)), url('/placeholder.svg');
     background-size: cover;
     background-position: center;
 }
 
-/* subtle tileable texture for hero */
 .bg-hero-texture {
     background-color: #ffffff;
-    /* stronger tint using #133b5c with very low opacity plus repeating SVG texture */
     background-image: linear-gradient(180deg, rgba(19, 59, 92, 0.06), rgba(19, 59, 92, 0.02)), url('/patterns/hero-texture.svg');
     background-repeat: repeat;
     background-size: 32px 32px;
     background-position: 0 0;
 }
 
-/* TiltCard styles */
 .card3d {
     position: relative;
     width: 100%;
@@ -67,19 +63,14 @@ body,
     right: 0.5rem
 }
 
-/* make card responsive */
 @media (min-width: 768px) {
     .card3d {
         height: 420px
     }
 }
 
-/* Project color tokens */
 :root {
     --nti-blue: #133b5c;
-    /* professional blue */
-    --text-color: #0f1720;
-    /* dark grey/near-black */
 }
 
 body {

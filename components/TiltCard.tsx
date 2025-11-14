@@ -28,7 +28,6 @@ export default function TiltCard({
         images && images.length > 0 ? images : null
     )
 
-    // load images from server API that lists public/hero-section if no images passed
     useEffect(() => {
         if (slides && slides.length > 0) return
         let cancelled = false
@@ -39,12 +38,10 @@ export default function TiltCard({
                     const data = await res.json()
                     if (!cancelled && Array.isArray(data) && data.length > 0) {
                         setSlides(data)
-                        // If slide0.jpg exists in the fetched list, start from that image
                         const idx = data.findIndex((s: string) => s.toLowerCase().endsWith('slide0.jpg'))
                         if (idx >= 0) setIndex(idx)
                     }
                 } catch (e) {
-                    // ignore — no slides available
                 }
             })()
         return () => {
@@ -52,7 +49,6 @@ export default function TiltCard({
         }
     }, [slides])
 
-    // auto-ticker
     useEffect(() => {
         const active = slides && slides.length > 0 ? slides : images
         const length = active ? active.length : 0
@@ -63,7 +59,6 @@ export default function TiltCard({
         return () => clearInterval(id)
     }, [images, slides, intervalMs])
 
-    // If images prop is provided and contains slide0.jpg, start from that image
     useEffect(() => {
         if (images && images.length > 0) {
             const idx = images.findIndex((s) => s.toLowerCase().endsWith('slide0.jpg'))
@@ -71,16 +66,13 @@ export default function TiltCard({
         }
     }, [images])
 
-    // VanillaTilt init
     useEffect(() => {
         let script: HTMLScriptElement | null = null
         const el = ref.current
         if (!el) return
 
         const initTilt = () => {
-            // @ts-ignore
             if (window.VanillaTilt && el) {
-                // @ts-ignore
                 window.VanillaTilt.init(el, {
                     max: 20,
                     speed: 400,
@@ -103,10 +95,8 @@ export default function TiltCard({
 
         return () => {
             try {
-                // @ts-ignore
                 if (el && el.vanillaTilt) el.vanillaTilt.destroy()
             } catch (e) {
-                // ignore
             }
             if (script && script.parentNode) script.parentNode.removeChild(script)
         }
@@ -122,7 +112,6 @@ export default function TiltCard({
                 <img src={active[index]} alt={`slide-${index}`} className="w-full h-full object-cover" />
             </div>
 
-            {/* overlay content at bottom (optional) */}
             {showOverlay && (
                 <div className="absolute left-0 right-0 bottom-0 p-4 bg-gradient-to-t from-black/60 to-transparent text-white">
                     <h3 className="text-lg font-semibold">{title}</h3>
@@ -143,11 +132,9 @@ export default function TiltCard({
                 </div>
             )}
 
-            {/* side controls */}
             <button aria-label="previous" onClick={prev} className="side-btn left-2 md:left-4">{'<'}</button>
             <button aria-label="next" onClick={next} className="side-btn right-2 md:right-4">{'>'}</button>
 
-            {/* small pagination dots */}
             <div className="absolute left-1/2 -translate-x-1/2 bottom-4 flex gap-2">
                 {(active || []).map((_, i) => (
                     <button
