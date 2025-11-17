@@ -69,9 +69,9 @@ export default function Approvals() {
                                         <h4 className="font-semibold">Major Industry Approvals</h4>
                                         <p className="text-sm text-gray-800 mt-2">Trusted by customers in key sectors including:</p>
                                         <ul className="mt-2 text-sm text-gray-800 space-y-1">
-                                            <li><strong>Medical:</strong> Stryker, POLYMED</li>
-                                            <li><strong>Construction & Heavy Equipment:</strong> TEREX, Dinamic Oil</li>
-                                            <li><strong>Telecommunications:</strong> CommScope</li>
+                                            <li><strong>Medical</strong></li>
+                                            <li><strong>Construction & Heavy Equipment</strong></li>
+                                            <li><strong>Telecommunications</strong></li>
                                         </ul>
                                     </div>
                                 </div>

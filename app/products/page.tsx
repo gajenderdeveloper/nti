@@ -49,7 +49,7 @@ export default function ProductsPage() {
                 <section className="mb-10">
                     <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-nti-blue text-center mb-4" style={{ color: NTI_BLUE_COLOR }}>Products</h1>
                     <p className="mb-3 text-center">
-                        Newtech Industries is a prominent Manufacturer and Supplier offering a comprehensive range of Precision Machined parts in metal, Epoxy, and
+                        Newtech Industries is a prominent Manufacturer and Supplier offering a comprehensive range of Precision Machined parts in metal, and
                         Plastics. Our products are widely acknowledged for their precise dimensions, robust construction, and excellent finish. All products are tested on
                         different quality parameters to ensure strength and durability.
                     </p>

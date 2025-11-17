@@ -5,7 +5,7 @@ export default function About() {
         <section id="about" className="py-16 bg-slate-900">
             <div className="max-w-7xl mx-auto px-6 text-center">
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-white">About NewTech Industries (NTI)</h2>
-                <p className="mt-4 text-white text-sm lg:text-lg">Since 2009, Newtech Industries (NTI) has been a prominent manufacturer and service provider of high-precision machined parts in metal, epoxy, and plastics. We are a single-spot solution for your production line, from R&amp;D and design to final manufacturing. Our products are trusted for their precise dimensions, robust construction, and excellent finish.</p>
+                <p className="mt-4 text-white text-sm lg:text-lg">Since 2009, Newtech Industries (NTI) has been a prominent manufacturer and service provider of high-precision machined parts in metal, and plastics. We are a single-spot solution for your production line, from R&amp;D and design to final manufacturing. Our products are trusted for their precise dimensions, robust construction, and excellent finish.</p>
 
                 <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                     <div className="p-6 bg-[#e6f0fa] border rounded transform transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg hover:border-[#13395d]">
