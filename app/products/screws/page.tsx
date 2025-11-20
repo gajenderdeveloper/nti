@@ -1,29 +1,32 @@
 import Link from 'next/link'
-import { products } from '../../../data/products'
+
+const PRODUCTS = [
+    { id: 's1', slug: 'screw-1', name: 'Screw 1', imageUrl: '/products/screw/screw.jpg', category: 'screws' },
+]
 
 export default function ScrewsPage() {
-    const items = products.filter((p) => p.category === 'screws')
     return (
-        <section className="bg-[#e6f0fa] min-h-screen py-12">
-            <main className="max-w-7xl mx-auto px-4">
-                <h1 className="text-3xl font-bold text-nti-blue mb-4">Screws</h1>
-                <p className="text-gray-700 mb-6">Custom screws and fasteners. Click an image to view details.</p>
+        <main className="py-16 bg-[#e6f0fa] min-h-screen">
+            <div className="container mx-auto px-6">
+                <div className="mb-8">
+                    <Link href="/#products" className="text-[#13395d] underline">← Back to Products</Link>
+                    <h1 className="text-3xl md:text-4xl font-bold text-[#13395d] mt-4">Screws</h1>
+                    <p className="text-gray-700 mt-2">Browse our range of precision-manufactured screws.</p>
+                </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                    {items.map((p) => (
-                        <article key={p.id} className="bg-white rounded shadow overflow-hidden">
-                            <Link href={`/products/${p.id}`} className="block">
-                                <div className="h-44 bg-gray-100 flex items-center justify-center overflow-hidden">
-                                    <img src={p.imageUrl} alt={p.name} className="w-full h-full object-cover" />
-                                </div>
-                                <div className="p-3">
-                                    <div className="font-medium text-lg">{p.name}</div>
-                                </div>
-                            </Link>
-                        </article>
+                    {PRODUCTS.map((product) => (
+                        <Link key={product.id} href={`/products/${product.slug}`} className="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow group">
+                            <div className="h-48 bg-slate-50 flex items-center justify-center p-4">
+                                <img src={product.imageUrl} alt={product.name} className="object-contain max-h-full max-w-full" />
+                            </div>
+                            <div className="p-4">
+                                <h3 className="font-semibold text-lg text-[#13395d] mb-1 group-hover:underline">{product.name}</h3>
+                            </div>
+                        </Link>
                     ))}
                 </div>
-            </main>
-        </section>
+            </div>
+        </main>
     )
 }

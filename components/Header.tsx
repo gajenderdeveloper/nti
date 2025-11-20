@@ -10,11 +10,11 @@ const productsNav = [
     },
     {
         title: 'OWN Cones',
-        href: '/products/cones/all',
+        href: '/products/cones',
     },
     {
         title: 'Pinions, Gears & Sprockets',
-        href: '/products/gears-pinions-sprockets',
+        href: '/products/gears',
     },
     {
         title: 'Plastic Strips',

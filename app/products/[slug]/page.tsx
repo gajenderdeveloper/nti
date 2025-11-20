@@ -1,74 +1,104 @@
-import fs from 'fs'
-import path from 'path'
 import React from 'react'
 import Link from 'next/link'
 
 type Props = { params: { slug: string } }
 
-const productMeta: Record<string, { title: string; kind?: 'category' | 'custom' }> = {
-    'cones': { title: 'Cones', kind: 'category' },
-    'custom-screws': { title: 'Custom Screws', kind: 'category' },
-    'rollers': { title: 'Rollers', kind: 'category' },
-    'gears': { title: 'Gears', kind: 'category' },
-    'cable-press-rollers': { title: 'Cable Press Rollers', kind: 'custom' },
-    'discharge-rollers': { title: 'Discharge Rollers', kind: 'custom' },
-    'pinions': { title: 'Pinions', kind: 'custom' },
-    'sprockets': { title: 'Sprockets', kind: 'custom' },
-    'construction-pads': { title: 'Construction Pads', kind: 'custom' },
-    'antenna-telecom-parts': { title: 'Antenna & Telecom Parts', kind: 'custom' },
-    'tailor-made-components': { title: 'Tailor-Made Components', kind: 'custom' },
+const MOCK_PRODUCTS = {
+    'rollers': [
+        { id: 'r1', slug: 'cable-roller', name: 'Cable Roller', imageUrl: '/products/roller/cable_roller.jpg', category: 'rollers' },
+        { id: 'r2', slug: 'discharge-roller', name: 'Discharge Roller', imageUrl: '/products/roller/discharge_roller.jpg', category: 'rollers' },
+        { id: 'r3', slug: 'simple-roller', name: 'Simple Roller', imageUrl: '/products/roller/simple_roller.jpg', category: 'rollers' },
+    ],
+    'cones': [
+        { id: 'c1', slug: 'color-cone-1', name: 'Color Cone 1', imageUrl: '/products/cones/color_cones_1.jpg', category: 'cones' },
+        { id: 'c2', slug: 'color-cone-2', name: 'Color Cone 2', imageUrl: '/products/cones/color_cones_2.jpg', category: 'cones' },
+        { id: 'c3', slug: 'colorless-cone-1', name: 'Colorless Cone 1', imageUrl: '/products/cones/colorless_cones_1.jpg', category: 'cones' },
+        { id: 'c4', slug: 'colorless-cone-2', name: 'Colorless Cone 2', imageUrl: '/products/cones/colorless_cones_2.jpg', category: 'cones' },
+        { id: 'c5', slug: 'colorless-cone-3', name: 'Colorless Cone 3', imageUrl: '/products/cones/colorless_cones_3.jpg', category: 'cones' },
+        { id: 'c6', slug: 'colorless-cone-4', name: 'Colorless Cone 4', imageUrl: '/products/cones/colorless_cones_4.jpg', category: 'cones' },
+        { id: 'c7', slug: 'colorless-cone-5', name: 'Colorless Cone 5', imageUrl: '/products/cones/colorless_cones_5.jpg', category: 'cones' },
+        { id: 'c8', slug: 'colorless-cone-6', name: 'Colorless Cone 6', imageUrl: '/products/cones/colorless_cones_6.jpg', category: 'cones' },
+        { id: 'c9', slug: 'own-cone-1', name: 'OWN Cone 1', imageUrl: '/products/cones/own_cones_1.jpg', category: 'cones' },
+        { id: 'c10', slug: 'own-cone-2', name: 'OWN Cone 2', imageUrl: '/products/cones/own_cones_2.jpg', category: 'cones' },
+        { id: 'c11', slug: 'own-cone-3', name: 'OWN Cone 3', imageUrl: '/products/cones/own_cones_3.jpg', category: 'cones' },
+    ],
+    'gears': [
+        { id: 'g1', slug: 'gear-1', name: 'Gear 1', imageUrl: 'https://placehold.co/200x200/eee/13395d?text=Gear+1', category: 'gears' },
+        { id: 'g2', slug: 'sprocket-1', name: 'Sprocket 1', imageUrl: 'https://placehold.co/200x200/eee/13395d?text=Sprocket+1', category: 'gears' },
+    ],
+    'plastic-strips': [
+        { id: 'ps1', slug: 'plastic-strip', name: 'Plastic Strip', imageUrl: 'https://placehold.co/200x200/eee/13395d?text=Plastic+Strip', category: 'plastic-strips' },
+    ],
+    'sub-reflectors': [
+        { id: 'sr1', slug: 'sub-reflector-1', name: 'Sub Reflector 1', imageUrl: '/products/sub_reflectors/sub_reflectors_1.jpg', category: 'sub-reflectors' },
+        { id: 'sr2', slug: 'sub-reflector-2', name: 'Sub Reflector 2', imageUrl: '/products/sub_reflectors/sub_reflectors_2.jpg', category: 'sub-reflectors' },
+    ],
+    'pipes': [
+        { id: 'p1', slug: 'pipe-1', name: 'Pipe 1', imageUrl: 'https://placehold.co/200x200/eee/13395d?text=Pipe+1', category: 'pipes' },
+    ],
+    'screws': [
+        { id: 's1', slug: 'screw-1', name: 'Screw 1', imageUrl: '/products/screw/screw.jpg', category: 'screws' },
+    ],
+    'slotted-rings': [
+        { id: 'sl1', slug: 'slotted-ring-1', name: 'Slotted Ring 1', imageUrl: '/products/rings/slotted_rings_1.jpg', category: 'slotted-rings' },
+        { id: 'sl2', slug: 'slotted-ring-2', name: 'Slotted Ring 2', imageUrl: '/products/rings/slotted_rings_2.jpg', category: 'slotted-rings' },
+    ],
+    'miscellaneous': [
+        { id: 'm1', slug: 'misc-part-1', name: 'Misc. Part 1', imageUrl: '/products/miscellaneous/miscellaneous_1.jpg', category: 'miscellaneous' },
+        { id: 'm2', slug: 'misc-part-2', name: 'Misc. Part 2', imageUrl: '/products/miscellaneous/miscellaneous_2.jpg', category: 'miscellaneous' },
+        { id: 'm3', slug: 'misc-part-3', name: 'Misc. Part 3', imageUrl: '/products/miscellaneous/miscellaneous_3.jpg', category: 'miscellaneous' },
+        { id: 'm4', slug: 'misc-part-4', name: 'Misc. Part 4', imageUrl: '/products/miscellaneous/miscellaneous_4.jpg', category: 'miscellaneous' },
+    ],
+}
+
+function getProductBySlug(slug: string) {
+    for (const category in MOCK_PRODUCTS) {
+        const product = MOCK_PRODUCTS[category].find((p: any) => p.slug === slug)
+        if (product) return product
+    }
+    return null
 }
 
 export default function Page({ params }: Props) {
     const { slug } = params
-    const meta = productMeta[slug] ?? { title: slug.replace(/[-_]/g, ' '), kind: 'custom' }
+    const product = getProductBySlug(slug)
 
-    const dir = path.join(process.cwd(), 'public', 'product-images', slug)
-    let images: string[] = []
-    try {
-        const files = fs.readdirSync(dir)
-        images = files.filter((f) => /\.(png|jpe?g|webp|svg)$/i.test(f)).map((f) => `/product-images/${slug}/${f}`)
-    } catch (e) {
-        images = [`/product-images/${slug}/placeholder.svg`]
+    if (!product) {
+        return (
+            <main className="py-16 bg-[#e6f0fa] min-h-screen">
+                <div className="container mx-auto px-6">
+                    <p className="text-slate-700">Product not found.</p>
+                    <Link href="/#products" className="text-[#13395d] underline">← Back to Products</Link>
+                </div>
+            </main>
+        )
     }
 
     return (
-        <main className="py-16 bg-[#e6f0fa]">
+        <main className="py-16 bg-[#e6f0fa] min-h-screen">
             <div className="container mx-auto px-6">
-                <div className="flex items-center justify-between">
-                    <h1 className="text-2xl font-bold">{meta.title}</h1>
-                    <Link href="/" className="text-sm text-[#13395d]">← Back to home</Link>
+                <div className="mb-6">
+                    <Link href="/#products" className="text-[#13395d] inline-block mr-4 underline">← Back to Products</Link>
                 </div>
 
-                <div className="mt-6 text-slate-700">
-                    {slug === 'construction-pads' ? (
-                        <div>
-                            <p>
-                                We manufacture high-durability construction pads for heavy equipment. All our pads are custom-made to your specific
-                                requirements. Please contact us with your drawings or specifications for a quote.
-                            </p>
-                            <div className="mt-6">
-                                <a href="mailto:sales@newtechindustries.example" className="inline-block px-4 py-2 bg-[#13395d] text-white rounded">Request a Quote</a>
-                            </div>
-                        </div>
-                    ) : meta.kind === 'custom' ? (
-                        <div>
-                            <p className="mb-4">{meta.title} — custom manufactured per your specifications. Contact us to request a quote or send drawings.</p>
-                            <div className="mt-6">
-                                <a href="mailto:sales@newtechindustries.example" className="inline-block px-4 py-2 bg-[#13395d] text-white rounded">Request a Quote</a>
-                            </div>
-                        </div>
-                    ) : (
-                        <p className="mb-4">{meta.title} — gallery showing available types for this category.</p>
-                    )}
-                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-4">
+                    <div className="bg-white border rounded overflow-hidden p-8">
+                        <img src={product.imageUrl} alt={product.name} className="w-full h-[480px] object-contain bg-gray-50" />
+                    </div>
 
-                <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                    {images.map((src) => (
-                        <div key={src} className="bg-white border rounded overflow-hidden p-4 flex items-center justify-center h-40">
-                            <img src={src} alt={meta.title} className="object-contain max-h-full" />
+                    <div className="p-4">
+                        <h1 className="text-3xl md:text-4xl font-bold text-[#13395d] mb-4">{product.name}</h1>
+                        <p className="text-gray-700 mb-3"><span className="font-semibold">Category:</span> {product.category.charAt(0).toUpperCase() + product.category.slice(1)}</p>
+                        <p className="text-gray-700 mb-6">
+                            High-quality {product.name.toLowerCase()} manufactured with precision engineering.
+                            Our products meet industry standards and are built to last.
+                        </p>
+                        <div className="mt-6">
+                            <Link href="/contact" className="inline-block bg-[#13395d] text-white px-6 py-3 rounded hover:bg-[#0f2a47] transition-colors">
+                                Request a Quote
+                            </Link>
                         </div>
-                    ))}
+                    </div>
                 </div>
             </div>
         </main>
