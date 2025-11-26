@@ -9,7 +9,7 @@ const productsNav = [
         href: '/products/rollers',
     },
     {
-        title: 'OWN Cones',
+        title: 'Outdoor Wireless Network(OWN) Cones',
         href: '/products/cones',
     },
     {

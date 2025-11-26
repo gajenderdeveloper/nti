@@ -4,13 +4,13 @@ import { useState } from 'react'
 export default function Hero() {
     const slides = [
         {
-            src: 'https://placehold.co/1200x800/e6f0fa/13395d?text=Slide+1+Image',
+            src: 'hero-section/slide1.jpg',
             alt: 'NTI precision engineering - slide 1',
             title: 'Precision Engineering for a Smarter Tomorrow',
             text: 'NewTech Industries (NTI) is a precision machining enterprise specializing in the manufacture of precision engineering mechanical components for Original Equipment Manufacturers (OEMs) across diverse industrial sectors. Leveraging advanced CNC technology, robust process controls, and stringent quality assurance protocols, NTI delivers engineered parts that meet exacting specifications for performance, durability, and dimensional accuracy.'
         },
         {
-            src: 'https://placehold.co/1200x800/d4e3f3/13395d?text=Slide+2+Image',
+            src: 'hero-section/slide2.jpg',
             alt: 'NTI precision engineering - slide 2',
             title: 'Precision Engineering for a Smarter Tomorrow',
             text: 'NTI partners with OEMs in automotive, aerospace, industrial automation, telecom and energy domains, offering scalable solutions from design validation to full-scale production. Our commitment to precision, reliability, and continuous improvement positions us as a trusted supplier in the manufacturing value chain.'

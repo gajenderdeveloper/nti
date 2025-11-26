@@ -1,8 +1,8 @@
 import Link from 'next/link'
 
 const PRODUCTS = [
-    { id: 'g1', slug: 'gear-1', name: 'Gear 1', imageUrl: 'https://placehold.co/200x200/eee/13395d?text=Gear+1', category: 'gears' },
-    { id: 'g2', slug: 'sprocket-1', name: 'Sprocket 1', imageUrl: 'https://placehold.co/200x200/eee/13395d?text=Sprocket+1', category: 'gears' },
+       { id: 'g1', slug: 'pinions', name: 'Pinions', imageUrl: '/products/gear/pinions_1.jpg', category: 'gears' },
+        { id: 'g2', slug: 'gear', name: 'Gears', imageUrl: '/products/gear/gear_1.jpg', category: 'gears' },
 ]
 
 export default function GearsPage() {

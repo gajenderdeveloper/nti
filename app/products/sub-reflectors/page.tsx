@@ -1,8 +1,8 @@
 import Link from 'next/link'
 
 const PRODUCTS = [
-    { id: 'sr1', slug: 'sub-reflector-1', name: 'Sub Reflector 1', imageUrl: '/products/sub_reflectors/sub_reflectors_1.jpg', category: 'sub-reflectors' },
-    { id: 'sr2', slug: 'sub-reflector-2', name: 'Sub Reflector 2', imageUrl: '/products/sub_reflectors/sub_reflectors_2.jpg', category: 'sub-reflectors' },
+        { id: 'sr1', slug: 'splash-plate', name: 'Splash Plate', imageUrl: '/products/sub_reflectors/splash_plate.jpg', category: 'sub-reflectors' },
+        { id: 'sr2', slug: 'sub-reflector-1', name: 'Sub Reflector', imageUrl: '/products/sub_reflectors/sub_reflectors.jpg', category: 'sub-reflectors' },
 ]
 
 export default function SubReflectorsPage() {

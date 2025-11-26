@@ -40,7 +40,7 @@ export default function ContactPage() {
 
     return (
         <main className="bg-[#e6f0fa] flex items-center justify-center py-8">
-            <div className="w-full max-w-2xl bg-[#133b5c] p-8 rounded-2xl shadow text-center">
+            <div className="w-full max-w-2xl bg-slate-900 p-8 rounded-2xl shadow text-center">
                 <h1 className="text-2xl font-bold mb-2 text-white">Contact Us</h1>
                 <p className="mb-6 text-white">Send us a message and we'll get back to you.</p>
 
@@ -82,7 +82,7 @@ export default function ContactPage() {
                             <p>Phone: <a href="tel:+919813047047" className="underline text-white">+91 9813047047</a></p>
                             <p>Email: <a href="mailto:nti@ntiep.com" className="underline text-white">nti@ntiep.com</a></p>
                         </div>
-                        <button type="submit" disabled={status === "sending"} className="bg-white text-[#133b5c] hover:bg-slate-900 hover:text-white font-bold px-4 py-2 rounded">
+                        <button type="submit" disabled={status === "sending"} className="bg-white text-[#133b5c] font-bold px-4 py-2 rounded">
                             {status === "sending" ? "Sending..." : "Send Message"}
                         </button>
                     </div>
