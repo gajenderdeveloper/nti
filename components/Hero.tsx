@@ -34,15 +34,15 @@ export default function Hero() {
                             <p className="mt-4 lg:mt-6 text-sm md:text-base text-[#13395d] font-semibold">{slide.text}</p>
                         </div>
 
-                        <div className="w-full h-80 md:h-full order-1 md:order-2 relative">
-                            <button aria-label="Previous slide" onClick={prev} className="absolute left-3 md:left-6 top-1/2 -translate-y-1/2 z-30 bg-white/80 hover:bg-white text-[#13395d] rounded-full p-2 shadow-md transition-colors">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <div className="w-full h-64 sm:h-80 md:h-full order-1 md:order-2 relative">
+                            <button aria-label="Previous slide" onClick={prev} className="absolute left-2 sm:left-3 md:left-6 top-1/2 -translate-y-1/2 z-30 bg-white/80 hover:bg-white text-[#13395d] rounded-full p-1.5 sm:p-2 shadow-md transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 sm:h-5 sm:w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
                                 </svg>
                             </button>
 
-                            <button aria-label="Next slide" onClick={next} className="absolute right-3 md:right-6 top-1/2 -translate-y-1/2 z-30 bg-white/80 hover:bg-white text-[#13395d] rounded-full p-2 shadow-md transition-colors">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <button aria-label="Next slide" onClick={next} className="absolute right-2 sm:right-3 md:right-6 top-1/2 -translate-y-1/2 z-30 bg-white/80 hover:bg-white text-[#13395d] rounded-full p-1.5 sm:p-2 shadow-md transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 sm:h-5 sm:w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
                                 </svg>
                             </button>

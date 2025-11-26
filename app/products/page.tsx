@@ -33,7 +33,7 @@ const MOCK_PRODUCTS = {
         { id: 'p1', slug: 'pipe-1', name: 'Pipe 1', imageUrl: 'https://placehold.co/200x200/eee/13395d?text=Pipe+1', category: 'pipes' },
     ],
     'screws': [
-        { id: 's1', slug: 'screw-1', name: 'Screw 1', imageUrl: 'products/screw/screw.jpg', category: 'screws' },
+        { id: 's1', slug: 'screw-1', name: 'Screw', imageUrl: 'products/screw/screw.jpg', category: 'screws' },
     ],
     'slotted-rings': [
         { id: 'sl1', slug: 'slotted-ring-1', name: 'Slotted Ring 1', imageUrl: 'products/rings/slotted_rings_1.jpg', category: 'slotted-rings' },

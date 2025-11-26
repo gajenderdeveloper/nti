@@ -7,7 +7,7 @@ const MOCK_PRODUCTS = {
     'rollers': [
         { id: 'r1', slug: 'cable-roller', name: 'Cable Press Roller', imageUrl: '/products/roller/cable_roller.jpg', category: 'rollers' },
         { id: 'r2', slug: 'discharge-roller', name: 'Discharge Roller', imageUrl: '/products/roller/discharge_roller.jpg', category: 'rollers' },
-        { id: 'r3', slug: 'simple-roller', name: 'Misc Roller', imageUrl: '/products/roller/misc_roller.jpg', category: 'rollers' },
+        { id: 'r3', slug: 'misc-roller', name: 'Misc Roller', imageUrl: '/products/roller/misc_roller.jpg', category: 'rollers' },
     ],
     'OWN cones': [
         { id: 'c1', slug: 'colorless-cone-1', name: 'OWN Cones without Coating 1', imageUrl: '/products/cones/colorless_cones_1.jpg', category: 'OWN cones' },
@@ -36,7 +36,7 @@ const MOCK_PRODUCTS = {
         { id: 'p1', slug: 'pipe-1', name: 'Pipe 1', imageUrl: 'https://placehold.co/200x200/eee/13395d?text=Pipe+1', category: 'pipes' },
     ],
     'screws': [
-        { id: 's1', slug: 'screw-1', name: 'Screw 1', imageUrl: '/products/screw/screw.jpg', category: 'screws' },
+        { id: 's1', slug: 'screw-1', name: 'Screw', imageUrl: '/products/screw/screw.jpg', category: 'screws' },
     ],
     'slotted-rings': [
         { id: 'sl1', slug: 'slotted-ring-1', name: 'Slotted Ring 1', imageUrl: '/products/rings/slotted_rings_1.jpg', category: 'slotted-rings' },
@@ -67,7 +67,6 @@ export default function Page({ params }: Props) {
             <main className="py-16 bg-[#e6f0fa] min-h-screen">
                 <div className="container mx-auto px-6">
                     <p className="text-slate-700">Product not found.</p>
-                    <Link href="/#products" className="text-[#13395d] underline">← Back to Products</Link>
                 </div>
             </main>
         )
@@ -76,24 +75,20 @@ export default function Page({ params }: Props) {
     return (
         <main className="py-16 bg-[#e6f0fa] min-h-screen">
             <div className="container mx-auto px-6">
-                <div className="mb-6">
-                    <Link href="/#products" className="text-[#13395d] inline-block mr-4 underline">← Back to Products</Link>
-                </div>
-
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-4">
-                    <div className="bg-white border rounded overflow-hidden p-8">
-                        <img src={product.imageUrl} alt={product.name} className="w-full h-[480px] object-contain bg-gray-50" />
+                    <div className="bg-white border rounded overflow-hidden p-4 sm:p-8">
+                        <img src={product.imageUrl} alt={product.name} className="w-full h-64 sm:h-80 md:h-[480px] object-contain bg-gray-50" />
                     </div>
 
                     <div className="p-4">
-                        <h1 className="text-3xl md:text-4xl font-bold text-[#13395d] mb-4">{product.name}</h1>
+                        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#13395d] mb-4">{product.name}</h1>
                         <p className="text-gray-700 mb-3"><span className="font-semibold">Category:</span> {product.category.charAt(0).toUpperCase() + product.category.slice(1)}</p>
                         <p className="text-gray-700 mb-6">
                             High-quality {product.name.toLowerCase()} manufactured with precision engineering.
                             Our products meet industry standards and are built to last.
                         </p>
                         <div className="mt-6">
-                            <Link href="/contact" className="inline-block bg-[#13395d] text-white px-6 py-3 rounded hover:bg-[#0f2a47] transition-colors">
+                            <Link href="/contact" className="inline-block bg-[#13395d] text-white px-4 sm:px-6 py-2 sm:py-3 rounded hover:bg-[#0f2a47] transition-colors text-sm sm:text-base">
                                 Request a Quote
                             </Link>
                         </div>

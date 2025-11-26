@@ -33,7 +33,7 @@ const MOCK_PRODUCTS = {
         { id: 'p1', slug: 'pipe-1', name: 'Pipe 1', imageUrl: 'https://placehold.co/200x200/eee/13395d?text=Pipe+1', category: 'pipes' },
     ],
     'screws': [
-        { id: 's1', slug: 'screw-1', name: 'Screw 1', imageUrl: 'products/screw/screw.jpg', category: 'screws' },
+        { id: 's1', slug: 'screw-1', name: 'Screw', imageUrl: 'products/screw/screw.jpg', category: 'screws' },
     ],
     'slotted-rings': [
         { id: 'sl1', slug: 'slotted-ring-1', name: 'Slotted Ring 1', imageUrl: 'products/rings/slotted_rings_1.jpg', category: 'slotted-rings' },
@@ -63,7 +63,6 @@ export default function ProductDetail({ params }: { params: { id: string } }) {
         return (
             <main className="max-w-4xl mx-auto p-6 bg-[#e6f0fa] min-h-screen">
                 <p className="text-slate-700">Product not found.</p>
-                <Link href="/#products" className="text-[#13395d] underline">← Back to Products</Link>
             </main>
         )
     }
@@ -71,7 +70,6 @@ export default function ProductDetail({ params }: { params: { id: string } }) {
     return (
         <main className="max-w-6xl mx-auto px-4 py-12 bg-[#e6f0fa] min-h-screen">
             <div className="mb-4">
-                <Link href="/#products" className="text-[#13395d] inline-block mr-4 underline">← Back to Products</Link>
                 <Link href="/contact" className="inline-block bg-[#13395d] text-white px-4 py-2 rounded">Contact Us</Link>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">

@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
 const PRODUCTS = [
-    { id: 's1', slug: 'screw-1', name: 'Screw 1', imageUrl: '/products/screw/screw.jpg', category: 'screws' },
+    { id: 's1', slug: 'screw-1', name: 'Screw', imageUrl: '/products/screw/screw.jpg', category: 'screws' },
 ]
 
 export default function ScrewsPage() {
@@ -9,7 +9,6 @@ export default function ScrewsPage() {
         <main className="py-16 bg-[#e6f0fa] min-h-screen">
             <div className="container mx-auto px-6">
                 <div className="mb-8">
-                    <Link href="/#products" className="text-[#13395d] underline">← Back to Products</Link>
                     <h1 className="text-3xl md:text-4xl font-bold text-[#13395d] mt-4">Screws</h1>
                     <p className="text-gray-700 mt-2">Browse our range of precision-manufactured screws.</p>
                 </div>

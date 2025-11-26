@@ -10,7 +10,6 @@ export default function SubReflectorsPage() {
         <main className="py-16 bg-[#e6f0fa] min-h-screen">
             <div className="container mx-auto px-6">
                 <div className="mb-8">
-                    <Link href="/#products" className="text-[#13395d] underline">← Back to Products</Link>
                     <h1 className="text-3xl md:text-4xl font-bold text-[#13395d] mt-4">Sub Reflectors / Splash Plates</h1>
                     <p className="text-gray-700 mt-2">Browse our range of sub reflectors and splash plates.</p>
                 </div>
