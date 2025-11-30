@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
 const PRODUCTS = [
-    { id: 'ps1', slug: 'plastic-strip', name: 'Plastic Strip', imageUrl: 'https://placehold.co/200x200/eee/13395d?text=Plastic+Strip', category: 'plastic-strips' },
+    { id: 'ps1', slug: 'plastic-strip', name: 'Plastic Strip', imageUrl: '/products/plastic_strips/plastic_strip.jpg', category: 'plastic-strips' },
 ]
 
 export default function PlasticStripsPage() {

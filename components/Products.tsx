@@ -25,14 +25,11 @@ const MOCK_PRODUCTS = {
         { id: 'g2', slug: 'gear', name: 'Gears', imageUrl: 'products/gear/gear_1.jpg', category: 'gears' },
     ],
     'plastic-strips': [
-        { id: 'ps1', slug: 'plastic-strip', name: 'Plastic Strip', imageUrl: 'https://placehold.co/200x200/eee/13395d?text=Plastic+Strip', category: 'plastic-strips' },
+        { id: 'ps1', slug: 'plastic-strip', name: 'Plastic Strip', imageUrl: '/products/plastic_strips/plastic_strip.jpg', category: 'plastic-strips' },
     ],
     'sub-reflectors': [
         { id: 'sr1', slug: 'splash-plate', name: 'Splash Plate', imageUrl: '/products/sub_reflectors/splash_plate.jpg', category: 'sub-reflectors' },
         { id: 'sr2', slug: 'sub-reflector-1', name: 'Sub Reflector', imageUrl: '/products/sub_reflectors/sub_reflectors.jpg', category: 'sub-reflectors' },
-    ],
-    'pipes': [
-        { id: 'p1', slug: 'pipe-1', name: 'Pipe 1', imageUrl: 'https://placehold.co/200x200/eee/13395d?text=Pipe+1', category: 'pipes' },
     ],
     'screws': [
         { id: 's1', slug: 'screw-1', name: 'Screw', imageUrl: '/products/screw/screw.jpg', category: 'screws' },
@@ -84,12 +81,6 @@ const featured = [
         kind: 'category',
     },
     {
-        slug: 'pipes',
-        title: 'Pipes',
-        linkText: 'View All Types',
-        kind: 'category',
-    },
-    {
         slug: 'screws',
         title: 'Screws',
         linkText: 'View All Types',
@@ -137,8 +128,6 @@ export default function Products() {
             category = 'plastic-strips'
         } else if (feature.slug.includes('sub-reflectors')) {
             category = 'sub-reflectors'
-        } else if (feature.slug.includes('pipes')) {
-            category = 'pipes'
         } else if (feature.slug.includes('slotted-rings')) {
             category = 'slotted-rings'
         } else if (feature.slug.includes('miscellaneous')) {

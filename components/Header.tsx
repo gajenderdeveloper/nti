@@ -25,10 +25,6 @@ const productsNav = [
         href: '/products/sub-reflectors',
     },
     {
-        title: 'Pipes',
-        href: '/products/pipes',
-    },
-    {
         title: 'Screws',
         href: '/products/screws',
     },
