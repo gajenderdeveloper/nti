@@ -19,7 +19,7 @@ export default function Hero() {
             src: 'hero-section/slide3.webp',
             alt: 'NTI precision engineering - slide 1',
             title: 'Precision Engineering for a Smarter Tomorrow',
-            text: 'NewTech Industries (NTI) is a precision machining enterprise specializing in the manufacture of precision engineering mechanical components for Original Equipment Manufacturers (OEMs) across diverse industrial sectors. Leveraging advanced CNC technology, robust process controls, and stringent quality assurance protocols, NTI delivers engineered parts that meet exacting specifications for performance, durability, and dimensional accuracy... .....'
+            text: 'NewTech Industries (NTI) is a precision machining enterprise specializing in the manufacture of precision engineering mechanical components for Original Equipment Manufacturers (OEMs) across diverse industrial sectors. Leveraging advanced CNC technology, robust process controls, and stringent quality assurance protocols, NTI delivers engineered parts that meet exacting specifications for performance, durability, and dimensional accuracy..'
         }
     ]
 
