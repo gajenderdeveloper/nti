@@ -4,7 +4,7 @@ const MOCK_PRODUCTS = {
     'rollers': [
         { id: 'r1', slug: 'cable-roller', name: 'Cable Press Roller', imageUrl: 'products/roller/cable_roller.webp', category: 'rollers' },
         { id: 'r2', slug: 'discharge-roller', name: 'Discharge Roller', imageUrl: 'products/roller/discharge_roller.webp', category: 'rollers' },
-        { id: 'r3', slug: 'simple-roller', name: 'Misc Roller', imageUrl: 'products/roller/misc_roller.webp', category: 'rollers' },
+        { id: 'r3', slug: 'misc-roller', name: 'Misc Roller', imageUrl: 'products/roller/misc_roller.webp', category: 'rollers' },
     ],
     'OWN cones': [
         { id: 'c1', slug: 'colorless-cone-1', name: 'OWN Cones without Coating 1', imageUrl: 'products/cones/colorless_cones_1.webp', category: 'OWN cones' },
