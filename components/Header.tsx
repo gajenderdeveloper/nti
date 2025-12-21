@@ -1,5 +1,6 @@
 "use client"
 import { useState } from 'react'
+import Image from 'next/image'
 
 const Link = ({ href, children, ...props }) => <a href={href} {...props}>{children}</a>;
 
@@ -47,7 +48,7 @@ export default function Header() {
             <div className="max-w-7xl mx-auto px-3">
                 <div className="flex items-center gap-4 bg-slate-900 rounded-lg shadow-md px-4 py-3 text-white">
                     <a href="/" className="inline-flex items-center gap-1">
-                        <img src="/logo/logo.png" alt="NTI logo" className="h-10 w-auto" />
+                        <Image src="/logo/logo.png" alt="NTI logo" width={40} height={40} className="h-10 w-auto" priority />
                         <span className="hidden sm:inline font-semibold text-white">NewTech Industries</span>
                     </a>
 
@@ -116,7 +117,7 @@ export default function Header() {
                 <div className="absolute right-0 top-0 h-full w-3/4 p-6 shadow-lg bg-slate-900 z-50 overflow-y-auto">
                     <div className="flex items-center justify-between">
                         <a href="/" className="inline-flex items-center gap-3">
-                            <img src="/logo/logo.png" alt="NTI logo" className="h-8 w-auto" />
+                            <Image src="/logo/logo.png" alt="NTI logo" width={32} height={32} className="h-8 w-auto" priority />
                         </a>
                         <button aria-label="Close menu" onClick={() => setOpen(false)} className="p-2 rounded text-white">✕</button>
                     </div>

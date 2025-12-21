@@ -1,5 +1,5 @@
 "use client"
-
+import Image from 'next/image'
 import React, { useState } from 'react'
 
 const MOCK_PRODUCTS = {
@@ -22,7 +22,7 @@ const MOCK_PRODUCTS = {
     ],
     'gears': [
         { id: 'g1', slug: 'pinions', name: 'Pinions', imageUrl: '/products/gear/pinions_1.webp', category: 'gears' },
-        { id: 'g2', slug: 'gear', name: 'Gears', imageUrl: 'products/gear/gear_1.webp', category: 'gears' },
+        { id: 'g2', slug: 'gear', name: 'Gears', imageUrl: '/products/gear/gear_1.webp', category: 'gears' },
     ],
     'plastic-strips': [
         { id: 'ps1', slug: 'plastic-strip', name: 'Plastic Strip', imageUrl: '/products/plastic_strips/plastic_strip.webp', category: 'plastic-strips' },
@@ -178,7 +178,7 @@ export default function Products() {
                                                     {galleryItems.map((g) => (
                                                         <Link key={g.id} href={`/products/${g.slug}`} className="block min-w-[160px] max-w-[200px] text-left group">
                                                             <div className="bg-slate-50 h-36 flex items-center justify-center border rounded overflow-hidden group-hover:shadow-lg transition-shadow">
-                                                                <img src={g.imageUrl} alt={g.name} className="object-contain h-32" />
+                                                                <Image src={g.imageUrl} alt={g.name} width={200} height={200} className="object-contain h-32" />
                                                             </div>
                                                             <p className="text-sm font-semibold text-slate-700 mt-2 truncate">{g.name}</p>
                                                         </Link>
@@ -193,7 +193,7 @@ export default function Products() {
                                         {selectedProduct && (
                                             <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
                                                 <div className="md:col-span-2 bg-white border rounded overflow-hidden p-4">
-                                                    <img src={selectedProduct.imageUrl} alt={selectedProduct.name} className="w-full h-64 object-contain bg-gray-50" />
+                                                    <Image src={selectedProduct.imageUrl} alt={selectedProduct.name} width={600} height={400} className="w-full h-64 object-contain bg-gray-50" />
                                                 </div>
                                                 <div className="p-4">
                                                     <h4 className="text-2xl font-bold text-nti-blue mb-2">{selectedProduct.name}</h4>

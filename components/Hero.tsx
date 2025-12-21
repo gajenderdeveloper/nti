@@ -1,16 +1,16 @@
 "use client"
 import { useState } from 'react'
-
+import Image from 'next/image'
 export default function Hero() {
     const slides = [
         {
-            src: 'hero-section/slide1.webp',
+            src: '/hero-section/slide1.webp',
             alt: 'NTI precision engineering - slide 1',
             title: 'Precision Engineering for a Smarter Tomorrow',
             text: 'NewTech Industries (NTI) is a precision machining enterprise specializing in the manufacture of precision engineering mechanical components for Original Equipment Manufacturers (OEMs) across diverse industrial sectors. Leveraging advanced CNC technology, robust process controls, and stringent quality assurance protocols, NTI delivers engineered parts that meet exacting specifications for performance, durability, and dimensional accuracy.'
         },
         {
-            src: 'hero-section/slide2.webp',
+            src: '/hero-section/slide2.webp',
             alt: 'NTI precision engineering - slide 2',
             title: 'Precision Engineering for a Smarter Tomorrow',
             text: 'NTI partners with OEMs in automotive, aerospace, industrial automation, telecom and energy domains, offering scalable solutions from design validation to full-scale production. Our commitment to precision, reliability, and continuous improvement positions us as a trusted supplier in the manufacturing value chain.'
@@ -48,12 +48,13 @@ export default function Hero() {
                             </button>
 
 
-                            <img
+                            <Image
                                 key={slide.src}
                                 src={slide.src}
                                 alt={slide.alt}
-                                className="object-cover w-full h-full"
-                                fetchPriority={index === 0 ? 'high' : 'auto'}
+                                fill
+                                className="object-cover"
+                                priority={index === 0}
                             />
                         </div>
                     </div>

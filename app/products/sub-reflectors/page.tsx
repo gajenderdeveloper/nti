@@ -1,8 +1,8 @@
 import Link from 'next/link'
-
+import Image from 'next/image'
 const PRODUCTS = [
-        { id: 'sr1', slug: 'splash-plate', name: 'Splash Plate', imageUrl: '/products/sub_reflectors/splash_plate.webp', category: 'sub-reflectors' },
-        { id: 'sr2', slug: 'sub-reflector-1', name: 'Sub Reflector', imageUrl: '/products/sub_reflectors/sub_reflectors.webp', category: 'sub-reflectors' },
+    { id: 'sr1', slug: 'splash-plate', name: 'Splash Plate', imageUrl: '/products/sub_reflectors/splash_plate.webp', category: 'sub-reflectors' },
+    { id: 'sr2', slug: 'sub-reflector-1', name: 'Sub Reflector', imageUrl: '/products/sub_reflectors/sub_reflectors.webp', category: 'sub-reflectors' },
 ]
 
 export default function SubReflectorsPage() {
@@ -18,7 +18,7 @@ export default function SubReflectorsPage() {
                     {PRODUCTS.map((product) => (
                         <Link key={product.id} href={`/products/${product.slug}`} className="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow group">
                             <div className="h-48 bg-slate-50 flex items-center justify-center p-4">
-                                <img src={product.imageUrl} alt={product.name} className="object-contain max-h-full max-w-full" />
+                                <Image src={product.imageUrl} alt={product.name} width={300} height={300} className="object-contain max-h-full max-w-full" />
                             </div>
                             <div className="p-4">
                                 <h3 className="font-semibold text-lg text-[#13395d] mb-1 group-hover:underline">{product.name}</h3>
