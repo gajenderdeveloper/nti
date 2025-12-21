@@ -1,34 +1,33 @@
-import Head from 'next/head'
+import { Metadata } from 'next'
 
 type Props = {
     title?: string
     description?: string
 }
 
-export default function SEO({ title, description }: Props) {
+export function generateMetadata({ title, description }: Props = {}): Metadata {
     const metaTitle = title || 'New Tech Industries (NTI) - Precision Engineering'
     const metaDescription = description || 'Precision machined metal and plastic parts | ISO 9001:2015 & AS9100 D Certified'
 
-    const jsonLd = {
+    return {
+        title: metaTitle,
+        description: metaDescription,
+        robots: 'index,follow'
+    }
+}
+
+export function generateJsonLd() {
+    return {
         "@context": "https://schema.org",
         "@type": "Organization",
         "name": "New Tech Industries (NTI)",
-        "url": "https://example.com",
-        "logo": "https://example.com/logo.png",
+        "url": "https://ntiep.com",
+        "logo": "https://ntiep.com/logo/logo.png",
         "sameAs": [],
         "contactPoint": [{
             "@type": "ContactPoint",
-            "telephone": "+91-XXXXXXXXXX",
+            "telephone": "+91-9813047047",
             "contactType": "customer service"
         }]
     }
-
-    return (
-        <Head>
-            <title>{metaTitle}</title>
-            <meta name="description" content={metaDescription} />
-            <meta name="robots" content="index,follow" />
-            <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-        </Head>
-    )
 }

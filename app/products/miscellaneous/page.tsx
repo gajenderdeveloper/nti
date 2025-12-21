@@ -1,10 +1,10 @@
 import Link from 'next/link'
 
 const PRODUCTS = [
-        { id: 'm1', slug: 'misc-part-1', name: 'PTFE Parts', imageUrl: '/products/miscellaneous/miscellaneous_1.jpg', category: 'miscellaneous' },
-        { id: 'm2', slug: 'misc-part-2', name: 'Washer and Spacers', imageUrl: '/products/miscellaneous/miscellaneous_2.jpg', category: 'miscellaneous' },
-        { id: 'm3', slug: 'misc-part-3', name: 'Metal Machined Parts', imageUrl: '/products/miscellaneous/miscellaneous_3.jpg', category: 'miscellaneous' },
-        { id: 'm4', slug: 'misc-part-4', name: '⁠Extrusion & Machined Components', imageUrl: '/products/miscellaneous/miscellaneous_4.jpg', category: 'miscellaneous' },
+        { id: 'm1', slug: 'misc-part-1', name: 'PTFE Parts', imageUrl: '/products/miscellaneous/miscellaneous_1.webp', category: 'miscellaneous' },
+        { id: 'm2', slug: 'misc-part-2', name: 'Washer and Spacers', imageUrl: '/products/miscellaneous/miscellaneous_2.webp', category: 'miscellaneous' },
+        { id: 'm3', slug: 'misc-part-3', name: 'Metal Machined Parts', imageUrl: '/products/miscellaneous/miscellaneous_3.webp', category: 'miscellaneous' },
+        { id: 'm4', slug: 'misc-part-4', name: '⁠Extrusion & Machined Components', imageUrl: '/products/miscellaneous/miscellaneous_4.webp', category: 'miscellaneous' },
 ]
 
 export default function MiscellaneousPage() {

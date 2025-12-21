@@ -4,7 +4,7 @@ export default function Footer() {
             <div className="max-w-6xl mx-auto px-6 py-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
                 <div>
                     <a href="/" className="inline-flex items-center gap-3">
-                        <img src="/logo/NTILogo.png" alt="NTI logo" className="h-10 w-auto" />
+                        <img src="/logo/logo.png" alt="NTI logo" className="h-10 w-auto" />
                         <span className="sr-only">Newtech Industries</span>
                     </a>
                     <p className="mt-4 text-sm text-slate-300">A prominent Manufacturer, Supplier, and Service Provider offering a comprehensive range of Precision Machined parts in metal & Plastics.</p>

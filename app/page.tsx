@@ -1,4 +1,4 @@
-import SEO from '../components/SEO'
+import { generateMetadata as getSEOMetadata, generateJsonLd } from '../components/SEO'
 import Hero from '../components/Hero'
 import About from '../components/About'
 import Approvals from '../components/Approvals'
@@ -10,10 +10,17 @@ import Industries from '../components/Industries'
 import WhyChoose from '../components/WhyChoose'
 import Contact from '../components/Contact'
 
+export const metadata = getSEOMetadata()
+
 export default function Page() {
+    const jsonLd = generateJsonLd()
+
     return (
         <>
-            <SEO />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
             <Hero />
             <About />
             <Approvals />

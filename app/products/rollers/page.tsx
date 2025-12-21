@@ -1,9 +1,9 @@
 import Link from 'next/link'
 
 const PRODUCTS = [
-    { id: 'r1', slug: 'cable-roller', name: 'Cable Press Roller', imageUrl: '/products/roller/cable_roller.jpg', category: 'rollers' },
-    { id: 'r2', slug: 'discharge-roller', name: 'Discharge Roller', imageUrl: '/products/roller/discharge_roller.jpg', category: 'rollers' },
-    { id: 'r3', slug: 'misc-roller', name: 'Misc Roller', imageUrl: '/products/roller/misc_roller.jpg', category: 'rollers' },
+    { id: 'r1', slug: 'cable-roller', name: 'Cable Press Roller', imageUrl: '/products/roller/cable_roller.webp', category: 'rollers' },
+    { id: 'r2', slug: 'discharge-roller', name: 'Discharge Roller', imageUrl: '/products/roller/discharge_roller.webp', category: 'rollers' },
+    { id: 'r3', slug: 'misc-roller', name: 'Misc Roller', imageUrl: '/products/roller/misc_roller.webp', category: 'rollers' },
 ]
 
 export default function RollersPage() {

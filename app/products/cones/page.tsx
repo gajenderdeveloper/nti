@@ -1,18 +1,18 @@
 import Link from 'next/link'
 
 const PRODUCTS_WITHOUT_COATING = [
-    { id: 'c1', slug: 'colorless-cone-1', name: 'OWN Cones without Coating 1', imageUrl: '/products/cones/colorless_cones_1.jpg', category: 'cones' },
-    { id: 'c2', slug: 'colorless-cone-2', name: 'OWN Cones without Coating 2', imageUrl: '/products/cones/colorless_cones_2.jpg', category: 'cones' },
-    { id: 'c3', slug: 'colorless-cone-3', name: 'OWN Cones without Coating 3', imageUrl: '/products/cones/colorless_cones_3.jpg', category: 'cones' },
-    { id: 'c4', slug: 'colorless-cone-4', name: 'OWN Cones without Coating 4', imageUrl: '/products/cones/colorless_cones_4.jpg', category: 'cones' },
-    { id: 'c5', slug: 'colorless-cone-5', name: 'OWN Cones without Coating 5', imageUrl: '/products/cones/colorless_cones_5.jpg', category: 'cones' },
-    { id: 'c6', slug: 'colorless-cone-6', name: 'OWN Cones without Coating 6', imageUrl: '/products/cones/colorless_cones_6.jpg', category: 'cones' },
+    { id: 'c1', slug: 'colorless-cone-1', name: 'OWN Cones without Coating 1', imageUrl: '/products/cones/colorless_cones_1.webp', category: 'cones' },
+    { id: 'c2', slug: 'colorless-cone-2', name: 'OWN Cones without Coating 2', imageUrl: '/products/cones/colorless_cones_2.webp', category: 'cones' },
+    { id: 'c3', slug: 'colorless-cone-3', name: 'OWN Cones without Coating 3', imageUrl: '/products/cones/colorless_cones_3.webp', category: 'cones' },
+    { id: 'c4', slug: 'colorless-cone-4', name: 'OWN Cones without Coating 4', imageUrl: '/products/cones/colorless_cones_4.webp', category: 'cones' },
+    { id: 'c5', slug: 'colorless-cone-5', name: 'OWN Cones without Coating 5', imageUrl: '/products/cones/colorless_cones_5.webp', category: 'cones' },
+    { id: 'c6', slug: 'colorless-cone-6', name: 'OWN Cones without Coating 6', imageUrl: '/products/cones/colorless_cones_6.webp', category: 'cones' },
 ]
 
 const PRODUCTS_WITH_COATING = [
-    { id: 'c7', slug: 'own-cone-1', name: 'OWN Cones with Conductive Coating 1', imageUrl: '/products/cones/own_cones_1.jpg', category: 'cones' },
-    { id: 'c8', slug: 'own-cone-2', name: 'OWN Cones with Conductive Coating 2', imageUrl: '/products/cones/own_cones_2.jpg', category: 'cones' },
-    { id: 'c9', slug: 'own-cone-3', name: 'OWN Cones with Conductive Coating 3', imageUrl: '/products/cones/own_cones_3.jpg', category: 'cones' },
+    { id: 'c7', slug: 'own-cone-1', name: 'OWN Cones with Conductive Coating 1', imageUrl: '/products/cones/own_cones_1.webp', category: 'cones' },
+    { id: 'c8', slug: 'own-cone-2', name: 'OWN Cones with Conductive Coating 2', imageUrl: '/products/cones/own_cones_2.webp', category: 'cones' },
+    { id: 'c9', slug: 'own-cone-3', name: 'OWN Cones with Conductive Coating 3', imageUrl: '/products/cones/own_cones_3.webp', category: 'cones' },
 ]
 
 export default function ConesPage() {

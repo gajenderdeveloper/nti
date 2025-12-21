@@ -2,7 +2,7 @@ Place the NTI logo image here as PNG:
 
 Save the provided logo attachment as:
 
-  public/logo/NTILogo.png
+  public/logo/logo.png
 
 The application layout references this path to show the logo in the top-left of the site.
 

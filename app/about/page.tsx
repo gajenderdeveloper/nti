@@ -1,10 +1,13 @@
-import SEO from '../../components/SEO'
+import { generateMetadata as getSEOMetadata } from '../../components/SEO'
+
+export const metadata = getSEOMetadata({
+    title: "About Newtech Industries (NTI)",
+    description: "About NTI — ISO 9001:2015 & AS9100 D Certified precision manufacturer"
+})
 
 export default function AboutPage() {
     return (
         <>
-            <SEO title="About Newtech Industries (NTI)" description="About NTI — ISO 9001:2015 & AS9100 D Certified precision manufacturer" />
-
             <section className="py-16 bg-[#e6f0fa]">
                 <div className="max-w-6xl mx-auto px-6 space-y-12">
                     <div className="grid gap-8">
