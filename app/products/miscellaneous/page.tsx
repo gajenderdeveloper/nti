@@ -1,10 +1,10 @@
 import Link from 'next/link'
-
+import Image from 'next/image'
 const PRODUCTS = [
-        { id: 'm1', slug: 'misc-part-1', name: 'PTFE Parts', imageUrl: '/products/miscellaneous/miscellaneous_1.webp', category: 'miscellaneous' },
-        { id: 'm2', slug: 'misc-part-2', name: 'Washer and Spacers', imageUrl: '/products/miscellaneous/miscellaneous_2.webp', category: 'miscellaneous' },
-        { id: 'm3', slug: 'misc-part-3', name: 'Metal Machined Parts', imageUrl: '/products/miscellaneous/miscellaneous_3.webp', category: 'miscellaneous' },
-        { id: 'm4', slug: 'misc-part-4', name: '⁠Extrusion & Machined Components', imageUrl: '/products/miscellaneous/miscellaneous_4.webp', category: 'miscellaneous' },
+    { id: 'm1', slug: 'misc-part-1', name: 'PTFE Parts', imageUrl: '/products/miscellaneous/miscellaneous_1.webp', category: 'miscellaneous' },
+    { id: 'm2', slug: 'misc-part-2', name: 'Washer and Spacers', imageUrl: '/products/miscellaneous/miscellaneous_2.webp', category: 'miscellaneous' },
+    { id: 'm3', slug: 'misc-part-3', name: 'Metal Machined Parts', imageUrl: '/products/miscellaneous/miscellaneous_3.webp', category: 'miscellaneous' },
+    { id: 'm4', slug: 'misc-part-4', name: '⁠Extrusion & Machined Components', imageUrl: '/products/miscellaneous/miscellaneous_4.webp', category: 'miscellaneous' },
 ]
 
 export default function MiscellaneousPage() {
@@ -20,7 +20,7 @@ export default function MiscellaneousPage() {
                     {PRODUCTS.map((product) => (
                         <Link key={product.id} href={`/products/${product.slug}`} className="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow group">
                             <div className="h-48 bg-slate-50 flex items-center justify-center p-4">
-                                <img src={product.imageUrl} alt={product.name} className="object-contain max-h-full max-w-full" />
+                                <Image src={product.imageUrl} alt={product.name} width={300} height={300} className="object-contain max-h-full max-w-full" />
                             </div>
                             <div className="p-4">
                                 <h3 className="font-semibold text-lg text-[#13395d] mb-1 group-hover:underline">{product.name}</h3>

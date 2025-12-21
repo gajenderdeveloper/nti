@@ -1,5 +1,5 @@
 import Link from 'next/link'
-
+import Image from 'next/image'
 const PRODUCTS = [
     { id: 's1', slug: 'screw-1', name: 'Screw', imageUrl: '/products/screw/screw.webp', category: 'screws' },
 ]
@@ -17,7 +17,7 @@ export default function ScrewsPage() {
                     {PRODUCTS.map((product) => (
                         <Link key={product.id} href={`/products/${product.slug}`} className="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow group">
                             <div className="h-48 bg-slate-50 flex items-center justify-center p-4">
-                                <img src={product.imageUrl} alt={product.name} className="object-contain max-h-full max-w-full" />
+                                <Image src={product.imageUrl} alt={product.name} width={300} height={300} className="object-contain max-h-full max-w-full" />
                             </div>
                             <div className="p-4">
                                 <h3 className="font-semibold text-lg text-[#13395d] mb-1 group-hover:underline">{product.name}</h3>

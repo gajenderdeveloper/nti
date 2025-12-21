@@ -1,8 +1,8 @@
 import Link from 'next/link'
-
+import Image from 'next/image'
 const PRODUCTS = [
-       { id: 'g1', slug: 'pinions', name: 'Pinions', imageUrl: '/products/gear/pinions_1.webp', category: 'gears' },
-        { id: 'g2', slug: 'gear', name: 'Gears', imageUrl: '/products/gear/gear_1.webp', category: 'gears' },
+    { id: 'g1', slug: 'pinions', name: 'Pinions', imageUrl: '/products/gear/pinions_1.webp', category: 'gears' },
+    { id: 'g2', slug: 'gear', name: 'Gears', imageUrl: '/products/gear/gear_1.webp', category: 'gears' },
 ]
 
 export default function GearsPage() {
@@ -18,7 +18,7 @@ export default function GearsPage() {
                     {PRODUCTS.map((product) => (
                         <Link key={product.id} href={`/products/${product.slug}`} className="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow group">
                             <div className="h-48 bg-slate-50 flex items-center justify-center p-4">
-                                <img src={product.imageUrl} alt={product.name} className="object-contain max-h-full max-w-full" />
+                                <Image src={product.imageUrl} alt={product.name} width={300} height={300} className="object-contain max-h-full max-w-full" />
                             </div>
                             <div className="p-4">
                                 <h3 className="font-semibold text-lg text-[#13395d] mb-1 group-hover:underline">{product.name}</h3>

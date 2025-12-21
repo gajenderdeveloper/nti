@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-
+import Image from 'next/image'
 type Props = { params: { slug: string } }
 
 const MOCK_PRODUCTS = {
@@ -74,7 +74,7 @@ export default function Page({ params }: Props) {
             <div className="container mx-auto px-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-4">
                     <div className="bg-white border rounded overflow-hidden p-4 sm:p-8">
-                        <img src={product.imageUrl} alt={product.name} className="w-full h-64 sm:h-80 md:h-[480px] object-contain bg-gray-50" />
+                        <Image src={product.imageUrl} alt={product.name} width={600} height={600} className="w-full h-64 sm:h-80 md:h-[480px] object-contain bg-gray-50" />
                     </div>
 
                     <div className="p-4">
