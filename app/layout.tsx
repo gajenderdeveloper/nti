@@ -2,7 +2,8 @@ import '../styles/globals.css'
 import type { ReactNode } from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-
+import { Analytics } from "@vercel/analytics/next"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 export const metadata = {
     icons: {
         icon: '/favicon.ico'
@@ -23,6 +24,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 
                 <main className="flex-1 bg-white">
                     {children}
+                    <Analytics />
+                    <SpeedInsights />
                 </main>
 
                 <Footer />
