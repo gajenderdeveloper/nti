@@ -1,5 +1,5 @@
 "use client"
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Image from 'next/image'
 export default function Hero() {
     const slides = [
@@ -17,12 +17,20 @@ export default function Hero() {
         }
     ]
 
+    // Deduplicate slides by `src` to avoid accidental duplicate slides
+    const uniqueSlides = Array.from(new Map(slides.map(s => [s.src, s])).values())
+
     const [index, setIndex] = useState(0)
 
-    const prev = () => setIndex((i) => (i - 1 + slides.length) % slides.length)
-    const next = () => setIndex((i) => (i + 1) % slides.length)
+    // If slides change (or duplicates removed), ensure index stays in range
+    useEffect(() => {
+        if (index >= uniqueSlides.length) setIndex(0)
+    }, [uniqueSlides.length, index])
 
-    const slide = slides[index]
+    const prev = () => setIndex((i) => (i - 1 + uniqueSlides.length) % uniqueSlides.length)
+    const next = () => setIndex((i) => (i + 1) % uniqueSlides.length)
+
+    const slide = uniqueSlides[index]
 
     return (
         <section className="py-6 lg:pt-8 lg:pb-16 bg-[#e6f0fa] font-sans">
