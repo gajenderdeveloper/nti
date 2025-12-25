@@ -18,8 +18,8 @@ const productsNav = [
         href: '/products/gears',
     },
     {
-        title: 'Plastic Strips',
-        href: '/products/plastic-strips',
+        title: 'Wear Pads',
+        href: '/products/wear-pads',
     },
     {
         title: 'Sub Reflectors / Splash Plates',

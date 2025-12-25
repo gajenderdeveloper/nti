@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 const PRODUCTS = [
-    { id: 'ps1', slug: 'plastic-strip', name: 'Plastic Strip', imageUrl: '/products/plastic_strips/plastic_strip.webp', category: 'plastic-strips' },
+    { id: 'ps1', slug: 'wear-pad', name: 'Wear Pad', imageUrl: '/products/wear_pad/wear_pad.webp', category: 'wear-pads' },
 ]
 
 export default function PlasticStripsPage() {
@@ -9,8 +9,8 @@ export default function PlasticStripsPage() {
         <main className="py-16 bg-[#e6f0fa] min-h-screen">
             <div className="container mx-auto px-6">
                 <div className="mb-8">
-                    <h1 className="text-3xl md:text-4xl font-bold text-[#13395d] mt-4">Plastic Strips</h1>
-                    <p className="text-gray-700 mt-2">Browse our range of plastic strips.</p>
+                    <h1 className="text-3xl md:text-4xl font-bold text-[#13395d] mt-4">Wear Pads</h1>
+                    <p className="text-gray-700 mt-2">Browse our range of Wear Pads.</p>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">

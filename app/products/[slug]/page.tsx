@@ -25,8 +25,8 @@ const MOCK_PRODUCTS = {
         { id: 'g1', slug: 'pinions', name: 'Pinions', imageUrl: '/products/gear/pinions_1.webp', category: 'gears' },
         { id: 'g2', slug: 'gear', name: 'Gears', imageUrl: '/products/gear/gear_1.webp', category: 'gears' },
     ],
-    'plastic-strips': [
-        { id: 'ps1', slug: 'plastic-strip', name: 'Plastic Strip', imageUrl: '/products/plastic_strips/plastic_strip.webp', category: 'plastic-strips' },
+    'wear-pads': [
+        { id: 'ps1', slug: 'wear-pad', name: 'Wear Pad', imageUrl: '/products/wear_pad/wear_pad.webp', category: 'wear-pads' },
     ],
     'sub-reflectors': [
         { id: 'sr1', slug: 'splash-plate', name: 'Splash Plate', imageUrl: '/products/sub_reflectors/splash_plate.webp', category: 'sub-reflectors' },
