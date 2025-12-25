@@ -14,7 +14,7 @@ const productsNav = [
         href: '/products/cones',
     },
     {
-        title: 'Pinions, Gears & Sprockets',
+        title: 'Sleeves Pulley, Pinions, Gears & Sprockets',
         href: '/products/gears',
     },
     {

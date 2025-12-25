@@ -3,6 +3,7 @@ import Image from 'next/image'
 const PRODUCTS = [
     { id: 'g1', slug: 'pinions', name: 'Pinions', imageUrl: '/products/gear/pinions_1.webp', category: 'gears' },
     { id: 'g2', slug: 'gear', name: 'Gears', imageUrl: '/products/gear/gear_1.webp', category: 'gears' },
+    { id: 'g3', slug: 'pulley', name: 'Pulley', imageUrl: '/products/gear/pulley.webp', category: 'gears' },
 ]
 
 export default function GearsPage() {
@@ -10,7 +11,7 @@ export default function GearsPage() {
         <main className="py-16 bg-[#e6f0fa] min-h-screen">
             <div className="container mx-auto px-6">
                 <div className="mb-8">
-                    <h1 className="text-3xl md:text-4xl font-bold text-[#13395d] mt-4">Pinions, Gears & Sprockets</h1>
+                    <h1 className="text-3xl md:text-4xl font-bold text-[#13395d] mt-4">Sleeves Pulley, Pinions, Gears & Sprockets</h1>
                     <p className="text-gray-700 mt-2">Browse our range of precision gears, pinions, and sprockets.</p>
                 </div>
 

@@ -33,6 +33,7 @@ const MOCK_PRODUCTS = {
     ],
     'screws': [
         { id: 's1', slug: 'screw-1', name: 'Screw', imageUrl: '/products/screw/screw.webp', category: 'screws' },
+        { id: 's2', slug: 'screw-2', name: 'Screw Parts', imageUrl: '/products/screw/screw_parts.webp', category: 'screws' },
     ],
     'slotted-rings': [
         { id: 'sl1', slug: 'slotted-ring-1', name: 'Slotted Ring 1', imageUrl: '/products/rings/slotted_rings_1.webp', category: 'slotted-rings' },

@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 const PRODUCTS = [
     { id: 's1', slug: 'screw-1', name: 'Screw', imageUrl: '/products/screw/screw.webp', category: 'screws' },
+     { id: 's2', slug: 'screw-2', name: 'Screw Part', imageUrl: '/products/screw/screw_parts.webp', category: 'screws' },
 ]
 
 export default function ScrewsPage() {
