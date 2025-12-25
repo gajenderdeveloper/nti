@@ -13,7 +13,7 @@ export default function Hero() {
             src: 'hero-section/slide2.webp',
             alt: 'NTI precision engineering - slide 2',
             title: 'Precision Engineering for a Smarter Tomorrow',
-            text: 'NTI partners with OEMs in automotive, aerospace, industrial automation, telecom and energy domains, offering scalable solutions from design validation to full-scale production. Our commitment to precision, reliability, and continuous improvement positions us as a trusted supplier in the manufacturing value chain........'
+            text: 'NTI partners with OEMs in automotive, aerospace, industrial automation, telecom and energy domains, offering scalable solutions from design validation to full-scale production. Our commitment to precision, reliability, and continuous improvement positions us as a trusted supplier in the manufacturing value chain'
         }
     ]
 
