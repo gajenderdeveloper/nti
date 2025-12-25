@@ -82,7 +82,7 @@ const featured = [
     },
     {
         slug: 'screws',
-        title: 'Screws',
+        title: 'Peek Screws',
         linkText: 'View All Types',
         kind: 'category',
     },
